@@ -14,6 +14,8 @@
     <title>GetnBite</title>
   </head>
   <body>
+
+  
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
 	<div class="container p-2">
 					<img src="./img/Home/logoScritta.jpg" height="50">
@@ -127,7 +129,7 @@
 	
 	<div>
 		<center>
-			<p><a style="text-decoration: none; color: #00E1A5; font-size:20px;" href="recensioni.php">Scrivi una recensione!</a></p>
+			<p><a style="text-decoration: none; color: #00E1A5; font-size:20px;" href="pagine/user/recensioni/recensioni.php">Scrivi una recensione!</a></p>
         </center>
 	<br>
 	<br>
