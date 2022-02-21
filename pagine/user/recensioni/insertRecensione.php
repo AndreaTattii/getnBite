@@ -11,7 +11,7 @@
         die("Errore di connessione: ".$connessione->connect_error);
     }
 
-    
 
-    sql ="INSERT INTO recensione";
+
+    $sql ="INSERT INTO recensione";
 ?>
