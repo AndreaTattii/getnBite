@@ -6,34 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS Personale-->
-    <link rel="stylesheet" href="cssPersonal/style.css">
+    <link rel="stylesheet" href="../../../../cssPersonal/style.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 
     <title>Menù di pesce</title>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
 	<div class="container p-2">
-					<img src="./img/Home/logoScritta.jpg" height="50">
+					<img src="../../../../img/Home/logoScritta.jpg" height="50">
 	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" href="index.php" style="color: black">Home</a>
+				<a class="nav-link" href="../../../../index.php" style="color: black">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="eventi.php" style="color: black">Eventi</a>
+				<a class="nav-link" href="../../../../eventi.php" style="color: black">Eventi</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="login.php" style="color: black">Login</a>
+				<a class="nav-link" href="../../../../login.php" style="color: black">Login</a>
 			</li>
 		</ul>
 	 </div>
 	</div>
 	</nav>
 
-    <div style="background-image: url('img/Eventi/img1.png'); height: 500px">
+    <div style="background-image: url('../../../../img/Eventi/img1.png'); height: 500px">
         <center>
             <br>
             <br>

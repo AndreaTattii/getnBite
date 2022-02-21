@@ -14,22 +14,24 @@
     <title>GetnBite</title>
   </head>
   <body>
+
+
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
 	<div class="container p-2">
 					<img src="./img/Home/logoScritta.jpg" height="50">
 	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" href="contatti.php" style="color: black">Contatti</a>
+				<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="chiSiamo.php" style="color: black">Chi siamo</a>
+				<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="eventi.php" style="color: black">Eventi</a>
+				<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="menu.php" style="color: black">Menù</a>
+				<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="" style="color: black">Login</a>
@@ -127,7 +129,7 @@
 	
 	<div>
 		<center>
-			<p><a style="text-decoration: none; color: #00E1A5; font-size:20px;" href="recensioni.php">Scrivi una recensione!</a></p>
+			<p><a style="text-decoration: none; color: #00E1A5; font-size:20px;" href="pagine/user/recensioni/recensioni.php">Scrivi una recensione!</a></p>
         </center>
 	<br>
 	<br>
