@@ -43,7 +43,7 @@
 				<input type="email" placeholder="" id="email" name="email" required>
 				<input type="password" placeholder="" id="password" name="password" required>
 				<input type="submit" value="Accedi" id="accedi">
-				<a href="../registra/formRegistra.html"><p>Non hai ancora un account?</p></a>
+				<a href="registrazioneemail.php"><p>Non hai ancora un account?</p></a>
 			</form>
 		</div>
 	</body>
