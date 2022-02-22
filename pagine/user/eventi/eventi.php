@@ -23,7 +23,7 @@
 				<a class="nav-link" href="../../../index.php" style="color: black">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="../menu.php" style="color: black">Menù</a>
+				<a class="nav-link" href="../menu/menu.php" style="color: black">Menù</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="../../pagine/user/login.php" style="color: black">Login</a>
