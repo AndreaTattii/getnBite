@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -12,10 +15,10 @@
         $passwordCorretta=0;
         $email = $_POST['email'];
         $password = $_POST['password'];
-        foreach($file as $user){
-                if(($email==$user->email)){
+        foreach($file as $utente){
+                if(($email==$utente->email)){
                     $emailcorretta=1;
-                if($password==$user->password)
+                if($password==$utente->password)
                     $passwordCorretta=1;
                 }	
         }
@@ -24,7 +27,7 @@
         //* Se email esiste e pwd giusta pagina avvio sessione
 
         if(!($emailCorretta))
-            echo  "Il nome email inserito non è esistente,".'<a href="../registrazione.html"> registrati</a>';
+            echo  "L'email inserita non è esistente,".'<a href="../registrazione.html">registrati qui</a>';
         else{
             if(!($passwordCorretta))
             echo  "La password inserita non è corretta,".'<a href="../index.html">torna al login</a>';
