@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../../../js/bootstrap.min.js"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS Personale-->
+  <link rel="stylesheet" href="../../../cssPersonal/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+  <title>Eventi</title>
+</head>
+
+<body>
+
+  <div id="registrazione">
+    <h1>Registrati</h1>
+    <form method="POST" action="php/registrazioneUtenti.php">
+
+      <input type="text" id="mail" name="mail" placeholder="inserisci mail" required><br>
+      <input type="text" id="nome" name="nome" placeholder="inserisci nome" required> <br>
+      <input type="text" id="cognome" name="cognome" placeholder="inserisci cognome" required><br>
+      <input type="text" id="indirizzo" name="indirizzo" placeholder="inserisci indirizzo" required><br>
+      <input type="text" id="civico" name="civico" placeholder="inserisci civico" required><br>
+      <input type="text" id="nTelefono" name="nTelefono" placeholder="inserisci numero telefonico" pattern="[0-9]{10}" required><br>
+      <input type="password" id="password" name="password" placeholder="inserisci la password" required>
+
+      <br>
+      <br>
+      <input type="submit" value="Invia dati">
+    </form>
+  </div>
+</body>
+
+</html>
