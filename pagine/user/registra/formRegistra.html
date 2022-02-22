@@ -47,7 +47,7 @@
         <!-- form -->
         <div id="registrazione" style="margin:5px; padding:20px;">
           
-          <form class="row g-3">
+          <form class="row g-3" action="registrazioneBackend/registra.php" method="post">
             <div class="col-md-6">
 
               <label for="inputEmail4" class="form-label">Nome</label>
@@ -76,19 +76,7 @@
               <input type="password" class="form-control" id="password" name="password" required>
 
             </div>
-            <div class="col-md-6">
-
-              <label for="inputCity" class="form-label">Indirizzo</label>
-              <input type="text" class="form-control" id="indirizzo" name="indirizzo" required>
-
-            </div>
             
-            <div class="col-md-2">
-
-              <label for="inputZip" class="form-label">Civ</label>
-              <input type="text" class="form-control" id="civ" name="civ">
-
-            </div>
             <div class="col-12">
               <div class="form-check">
 
@@ -99,8 +87,9 @@
 
               </div>
             </div>
+            <br>
             <div class="col-12">
-
+              <br>
               <button type="submit" class="btn btn-primary" style="background-color: #00E1A5; border-color: black;">Registrati</button>
 
             </div>
