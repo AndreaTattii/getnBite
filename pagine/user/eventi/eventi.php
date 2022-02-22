@@ -6,37 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS Personale-->
-    <link rel="stylesheet" href="cssPersonal/style.css">
+    <link rel="stylesheet" href="../../../cssPersonal/style.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 
     <title>Eventi</title>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
 	<div class="container p-2">
-					<img src="./img/Home/logoScritta.jpg" height="50">
+					<img src="../../../img/Home/logoScritta.jpg" height="50">
 	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" href="index.php" style="color: black">Home</a>
+				<a class="nav-link" href="../../../index.php" style="color: black">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="prodotti.php" style="color: black">Prodotti</a>
+				<a class="nav-link" href="../menu.php" style="color: black">Menù</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="menu.php" style="color: black">Menù</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="login.php" style="color: black">Login</a>
+				<a class="nav-link" href="../../pagine/user/login.php" style="color: black">Login</a>
 			</li>
 		</ul>
 	 </div>
 	</div>
 	</nav>
 
-    <div style="background-image: url('img/Eventi/img1.png'); height: 500px">
+    <div style="background-image: url('../../../img/Eventi/img1.png'); height: 500px">
         <center>
             <br>
             <br>
@@ -68,8 +65,8 @@
             <div class="dropdown">
                 <button class="dropbtn">Menù</button>
                 <div class="dropdown-content">
-                    <a href="menuPesce.php">Menù di Pesce</a>
-                    <a href="menuCarne.php">Menù di Carne</a>
+                    <a href="../menu/fissi/menuPesce.php">Menù di Pesce</a>
+                    <a href="../menu/fissi/menuCarne.php">Menù di Carne</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -90,7 +87,7 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 		  <div class="carousel-item active">
-			<img src="./img/Home/img5.png" class="d-block w-100" alt="...">
+			<img src="../../../img/Home/img5.png" class="d-block w-100" alt="...">
 		  </div>
 		</div>
 	</div>
@@ -99,7 +96,7 @@
 		<div class="container py-16 px-1">
 		  <div class="row py-4">
 			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-				<img src="./img/Home/logoScritta.jpg" width="400" class="mb-3">
+				<img src="../../../img/Home/logoScritta.jpg" width="400" class="mb-3">
 			</div>
 			<div style="position: relative; left: 700px;">
 				<p style="text-align: center;">Login</p>
@@ -111,6 +108,6 @@
 		</div>
 	  </footer>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
   </body>
 </html>

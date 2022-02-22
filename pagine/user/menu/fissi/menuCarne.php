@@ -23,10 +23,10 @@
 				<a class="nav-link" href="../../../../index.php" style="color: black">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="../../../../eventi.php" style="color: black">Eventi</a>
+				<a class="nav-link" href="../../eventi/eventi.php" style="color: black">Eventi</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="../../../../login.php" style="color: black">Login</a>
+				<a class="nav-link" href="../../../../pagine/user/login.php" style="color: black">Login</a>
 			</li>
 		</ul>
 	 </div>
@@ -84,7 +84,7 @@
             </div>
 			<div class="col-sm-3">
                 <div class="card" style="width:200px; height: 220px">
-                <img class="card-img-top" src="img/menudicarne/zeppole.png" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="../../../../img/menudicarne/zeppole.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>ZEPPOLE DI FEGATINI DI POLLO</b></a></p>
@@ -94,7 +94,7 @@
         </div>    
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/wrap.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/wrap.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>WRAP DI <br> PIADINA</b></a></p>
@@ -104,7 +104,7 @@
 		</div>
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/mozza.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/mozza.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>MOZZARELLA CON DI PEPERONI ROSSI</b></a></p>
@@ -120,7 +120,7 @@
             </div>
 			<div class="col-sm-3">
                 <div class="card" style="width:200px; height: 220px">
-                <img class="card-img-top" src="img/menudicarne/carbonara.png" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="../../../../img/menudicarne/carbonara.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>CARBONARA</b></a></p>
@@ -130,7 +130,7 @@
         </div>    
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/amatriciana.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/amatriciana.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>AMATRICIANA</b></a></p>
@@ -140,7 +140,7 @@
 		</div>
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/tagliatelle.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/tagliatelle.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>TAGLIATELLE BUFALA E CHAMPIGNON</b></a></p>
@@ -156,7 +156,7 @@
             </div>
 			<div class="col-sm-3">
                 <div class="card" style="width:200px; height: 220px">
-                <img class="card-img-top" src="img/menudicarne/filetto.png" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="../../../../img/menudicarne/filetto.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>FILETTO DI CINGHIALE</b></a></p>
@@ -166,7 +166,7 @@
         </div>  
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/salsiccia.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/salsiccia.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>SALSICCIA IN CROSTA DI PANE</b></a></p>
@@ -176,7 +176,7 @@
 		</div>
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/controfiletto.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/controfiletto.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>CONTROFILETTO DI MANZO E PATATE</b></a></p>
@@ -192,7 +192,7 @@
             </div>
 			<div class="col-sm-3">
                 <div class="card" style="width:200px; height: 220px">
-                <img class="card-img-top" src="img/menudicarne/peperoni.png" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="../../../../img/menudicarne/peperoni.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>PEPERONI AMMOLLICATI</b></a></p>
@@ -202,7 +202,7 @@
         </div>    
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/patate.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/patate.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>PATATE ALLA CARRETTIERA</b></a></p>
@@ -212,7 +212,7 @@
 		</div>
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/melanzane.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/melanzane.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>MELANZANE GRATINATE</b></a></p>
@@ -228,7 +228,7 @@
             </div>
 			<div class="col-sm-3">
                 <div class="card" style="width:200px; height: 220px">
-                <img class="card-img-top" src="img/menudicarne/zuccotto.png" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="../../../../img/menudicarne/zuccotto.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>ZUCCOTTO CON CIOCCOLATO</b></a></p>
@@ -238,7 +238,7 @@
         </div>    
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/profitterol.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/profitterol.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>PROFITTEROL CON GANACHE DI CREMA</b></a></p>
@@ -248,7 +248,7 @@
 		</div>
         <div class="col-sm-3">
             <div class="card" style="width:200px; height: 220px">
-            <img class="card-img-top" src="img/menudicarne/mousse.png" alt="Card image" style="width:100%">
+            <img class="card-img-top" src="../../../../img/menudicarne/mousse.png" alt="Card image" style="width:100%">
                 <div class="card-body">
                     <center>
                         <p><a style="text-decoration: none; color: #00E1A5; font-size:15px;"><b>MOUSSECAKE ALLE FRAGOLE E MANGO</b></a></p>
@@ -264,7 +264,7 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/Home/img5.png" class="d-block w-100" alt="...">
+                    <img src="../../../../img/Home/img5.png" class="d-block w-100" alt="...">
                 </div>
             </div>
 		</div>
@@ -273,7 +273,7 @@
 		<div class="container py-16 px-1">
 		  <div class="row py-4">
 			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-				<img src="./img/Home/logoScritta.jpg" width="400" class="mb-3">
+				<img src="../../../../img/Home/logoScritta.jpg" width="400" class="mb-3">
 			</div>
 			<div style="position: relative; left: 700px;">
 				<p style="text-align: center;">Login</p>
@@ -286,6 +286,6 @@
 	</footer>
 
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
   </body>
 </html>
