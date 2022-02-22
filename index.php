@@ -18,26 +18,26 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
 	<div class="container p-2">
-					<img src="./img/Home/logoScritta.jpg" height="50">
-	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="pagine/user/login/loginUtente.php" style="color: black">Login</a>
-			</li>
-		</ul>
-	 </div>
+		<img src="./img/Home/logoScritta.jpg" height="50">
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pagine/user/login/loginUtente.php" style="color: black">Login</a>
+				</li>
+			</ul>
+	 	</div>
 	</div>
 	</nav>
 	
@@ -154,8 +154,8 @@
 		  </div>
 		</div>
 		</div>
-	  </footer>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
