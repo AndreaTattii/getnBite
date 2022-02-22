@@ -129,7 +129,7 @@
 	
 	<div>
 		<center>
-			<p><a style="text-decoration: none; color: #00E1A5; font-size:20px;" href="pagine/user/recensioni/recensioni.php">Scrivi una recensione!</a></p>
+			<p><a style="text-decoration: none; color: #00E1A5; font-size:20px;" href="pagine/user/recensioni/formRecensione.html">Scrivi una recensione!</a></p>
         </center>
 	<br>
 	<br>
