@@ -17,12 +17,15 @@
     $mail = $connessione->real_escape_string($_REQUEST['mail']);
     $password = $connessione->real_escape_string($_REQUEST['password']);
     
-
+    //hashing della password
+    $password = hash("sha256", $password);
 
     $sql="INSERT INTO utente (nome, cognome, email, pass) VALUES 
     ('$nome','$cognome', '$mail', '$password')";
 
     if($connessione->query($sql) === true){
+        $_SESSION['mail']= $mail;
+        header("location: ../../../../");
         echo "Utente inserito con successo";
     }else{
         echo "Errore durante inserimento: ".$connessione->error;
