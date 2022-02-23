@@ -65,21 +65,29 @@
             <div class="col-12">
               <div class="form-check">
 
-                <input class="form-check-input" type="checkbox" id="gridCheck" >
+                <input class="form-check-input" type="checkbox" id="gridCheck"  >
                 <label class="form-check-label" for="gridCheck" >
                   Ricordami
                 </label>
 
               </div>
             </div>
-            <br>
+            <br><br>
+            <?php  //SOLUZIONE: nell'index.php settare la variabile di sessione "errore" a 1, in modo tale che non si entri nell'if
+            session_start();
+            //$_SESSION['errore']=1; Riga da mettere nell'index.php
+             if (($_SESSION['errore']==NULL)){ ?>
+            <div class="col-12">
+              <p style="color: red;">Dati inseriti errati</p>
+            </div>
+            <?php } session_destroy();?>
             <div class="col-12">
               <br>
               <button type="submit" class="btn btn-primary" style="background-color: #00E1A5; border-color: black;">Accedi</button>
-
+              <br><br>
             </div>
           </form>
-          <a href="../registra/formRegistra.html">Non hai un account? Registrati</a>
+          <p>Non hai un account? <a href="../registra/formRegistra.html"  style="color: #00E1A5; ">Registrati </a></p>
         </div>
         
       </div>
