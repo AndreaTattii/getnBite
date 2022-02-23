@@ -30,4 +30,6 @@
     }else{
         echo "Errore durante inserimento: ".$connessione->error;
     }
+
+    $connessione->close();
 ?>

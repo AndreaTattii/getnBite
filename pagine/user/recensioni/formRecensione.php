@@ -98,7 +98,7 @@
 					  <div class="col-12">
 						<br>
 						<label for="inputAddress" class="form-label">Scrivi la tua recensione.</label>
-						<textarea class="form-control" placeholder="Scrivi qui." name="recensione" id="recensione"></textarea>
+						<textarea class="form-control" placeholder="Scrivi qui." name="recensione" id="recensione" ></textarea>
 		  
 					  </div>
 					  
