@@ -47,6 +47,7 @@ CREATE TABLE Utente(
 
 CREATE TABLE Recensione(
 	id int PRIMARY KEY AUTO_INCREMENT,
+	valutaConsegna int NOT NULL,
 	data_pubblicazione DATE NOT NULL,
 	ora_pubblicazione TIME NOT NULL,
 	testo varchar(500) NOT NULL,
