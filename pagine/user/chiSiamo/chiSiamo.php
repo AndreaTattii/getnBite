@@ -90,9 +90,11 @@
     <div class="container pt-5">
 		<div class="row">
 			<div class="col-sm">
-				<center>
-				 <h2>Il nostro team<h2>
-				</center>
+			<div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                    <center>
+                        <h2>Il nostro team<h2>
+                    </center>
+                </div>
 			</div>
 		</div>
 		<br>

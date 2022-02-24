@@ -42,7 +42,7 @@
 									<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/logout/profilo.php" style="color: black">Profilo</a>
+									<a class="nav-link" href="pagine/user/profilo/profilo.php" style="color: black">Profilo</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="pagine/user/logout/logout.php" style="color: black">Logout</a>
@@ -108,9 +108,11 @@
 	<div class="container pt-5">
 		<div class="row">
 			<div class="col-sm">
-				<center>
-				 <h2>Come funziona l'app<h2>
-				</center>
+			<div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                    <center>
+                        <h2>Come funziona l'app<h2>
+                    </center>
+                </div>
 			</div>
 		</div>
 	</div>
