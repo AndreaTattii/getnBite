@@ -37,4 +37,8 @@
   
   .dropdown:hover .dropbtn {background-color: #00c591;}
 
-  
+  div.center-text  {
+    
+    justify-content: center;
+    align-items: center;
+  }

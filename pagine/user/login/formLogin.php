@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
   <!-- font -->
   <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
 
-  <title>Eventi</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -42,28 +43,17 @@
           </div>
         </nav>
         <div class="row center-text"> 
-          <h1 style="font-family: 'Inter'; font-size: 30px; color: black;">Benvenuto su GetnBite</h1>
+          <h1 style="font-family: 'Inter'; font-size: 30px; color: black;">Accedi al tuo account</h1>
         </div>
         <!-- form -->
-        <div id="registrazione" style="margin:5px; padding:20px;">
+        <div id="login" style="margin:5px; padding:20px;">
           
-          <form class="row g-3" action="registrazioneBackend/registra.php" method="post">
-            <div class="col-md-6">
-
-              <label for="inputEmail4" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="nome" name="nome" required>
-
-            </div>
-            <div class="col-md-6">
-
-              <label for="inputPassword4" class="form-label">Cognome</label>
-              <input type="text" class="form-control" id="cognome" name="cognome" required>
-
-            </div>
+          <form class="row g-3" action="loginUtente.php" method="post">
+        
             <div class="col-12">
               
               <label for="inputAddress" class="form-label">Mail</label>
-              <input type="mail" class="form-control" id="mail" name="mail" required>
+              <input type="email" class="form-control" id="mail" name="mail" required>
 
             </div>
             <div class="col-12">
@@ -76,20 +66,31 @@
             <div class="col-12">
               <div class="form-check">
 
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
+                <input class="form-check-input" type="checkbox" id="gridCheck"  >
+                <label class="form-check-label" for="gridCheck" >
                   Ricordami
                 </label>
 
               </div>
             </div>
-            <br>
+            <br><br>
+            <?php  //SOLUZIONE: nell'index.php settare la variabile di sessione "errore" a 1, in modo tale che non si entri nell'if
+            //$_SESSION['errore']=1;
+             if (isset($_SESSION['errore'])){ ?>
+            <div class="col-12">
+              <p style="color: red;">Dati inseriti errati</p>
+            </div>
+            <?php }else{
+              echo $_SESSION['email'];
+            }
+              ?>
             <div class="col-12">
               <br>
-              <button type="submit" class="btn btn-primary" style="background-color: #00E1A5; border-color: black;">Registrati</button>
-
+              <button type="submit" class="btn btn-primary" style="background-color: #00E1A5; border-color: black;">Accedi</button>
+              <br><br>
             </div>
           </form>
+          <p>Non hai un account? <a href="../registra/formRegistra.html"  style="color: #00E1A5; ">Registrati </a></p>
         </div>
         
       </div>
@@ -97,7 +98,7 @@
         <div style="background-color: #00E1A5; padding:30px;">
           <div class="container pt-5 center-text">
             <div class="row">
-              <img src="img/fattorinoCartoon.png" width="75%">
+              <img src="../registra/img/fattorinoCartoon.png" width="75%">
             </div>
             <div class="row center-text"> 
               <h1 style="font-family: 'Playfair Display';font-size: 30px; color: white;">Mangia con GetnBite</h1>
@@ -118,6 +119,8 @@
         
     </div>
   </div> 
+  
 </body>
 
 </html>
+<?php session_destroy(); ?>
