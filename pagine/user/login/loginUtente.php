@@ -1,50 +1,68 @@
-<!DOCTYPE html>
-<html>
-	<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-
-        <title>GetnBite</title>
-	</head>
-	<body>
     <?php
-        $emailCorretta=0;
-        $passwordCorretta=0;
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        foreach($file as $utente){
-                if(($email==$utente->email)){
-                    $emailcorretta=1;
-                if($password==$utente->password)
-                    $passwordCorretta=1;
-                }	
-        }
-        //* Se email non esiste invito a registrarsi
-        //* Se email esiste ma pwd sbagliata segnalazione errore e invito a reinserirla
-        //* Se email esiste e pwd giusta pagina avvio sessione
+        
 
-        if(!($emailCorretta))
-            echo  "L'email inserita non è esistente,".'<a href="../registrazione.html">registrati qui</a>';
-        else{
-            if(!($passwordCorretta))
-            echo  "La password inserita non è corretta,".'<a href="../index.html">torna al login</a>';
-            else{
-            //echo  "Accesso effettuato";
-            header("location: inserire qui percorso file"); 
-            }
+        $host="127.0.0.1";
+        $user="root";
+        $pass="";
+        $database="getnbite";
+    
+        $connessione= new mysqli($host, $user, $pass , $database);
+       
+    
+        /* if($connessione === false){
+            die("Errore di connessione: ".$connessione->connect_error);
         }
+    
+        $mail = $connessione->real_escape_string($_REQUEST['mail']);
+        $password = $connessione->real_escape_string($_REQUEST['password']);
+        
+        
+        if (isset($_SESSION['mail'])) {
+            header("Location: ../../../index.php");
+        }     
+        if (isset($_POST['submit'])) {
+            $mail = $_POST['mail'];
+            $password = hash($_POST['password']);  //hashing della password
+        
+            $sql = "SELECT * FROM users WHERE email='$mail' AND pass='$password'";
+            $result = mysqli_query($connessione, $sql);
+            if ($result->num_rows > 0) {
+                $row = mysqli_fetch_assoc($result);
+                $_SESSION['mail'] = $row['mail'];
+                header("Location: ../../../index.php");
+            } else {
+                echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
+            }
+        } */
+        
+        error_reporting(0);
+
+        if($connessione === false){
+            echo "Errore: ".$connessione->error;
+        }
+       
+        session_start();
+        
+        /*  if (isset($_SESSION['email'])) {           
+            header("Location: ../../../index.php");
+        }  */
+            $email = $_POST['mail'];
+            $password = $_POST['password'];
+            $password = hash("sha256", $password);
+
+            $sql = "SELECT email, pass FROM utente WHERE email='$email' AND pass='$password'";
+            $result = mysqli_query($connessione, $sql);
+            if ($result->num_rows > 0) {
+                $row = mysqli_fetch_assoc($result);
+                $_SESSION['email'] = $row['email'];
+                header("Location: ../../../index.php");
+            } else {
+                $_SESSION['errore'] = 1;
+                header("Location: formLogin.php");
+            }
+        
+
+
     ?>
-		<div>
-			<h1>Login</h1>
-			<form method="POST" action="php/accedi.php"> <!-- Pagina action da aggiornare-->
-				<input type="email" placeholder="" id="email" name="email" required>
-				<input type="password" placeholder="" id="password" name="password" required>
-				<input type="submit" value="Accedi" id="accedi">
-				<a href="registrazioneemail.php"><p>Non hai ancora un account?</p></a>
-			</form>
-		</div>
-	</body>
-</html>
+		

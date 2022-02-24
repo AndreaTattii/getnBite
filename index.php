@@ -15,7 +15,6 @@
   </head>
   <body>
 
-
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
 	<div class="container p-2">
 		<img src="./img/Home/logoScritta.jpg" height="50">
@@ -34,7 +33,7 @@
 					<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pagine/user/login/loginUtente.php" style="color: black">Login</a>
+					<a class="nav-link" href="pagine/user/login/formLogin.php" style="color: black">Login</a>
 				</li>
 			</ul>
 	 	</div>
