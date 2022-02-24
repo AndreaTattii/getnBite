@@ -1,6 +1,6 @@
 
     <?php
-        
+        session_start();
 
         $host="127.0.0.1";
         $user="root";
@@ -15,7 +15,7 @@
             echo "Errore: ".$connessione->error;
         }
        
-        session_start();
+        
         
         /*  if (isset($_SESSION['email'])) {           
             header("Location: ../../../index.php");
@@ -28,7 +28,7 @@
             $result = mysqli_query($connessione, $sql);
             if ($result->num_rows > 0) {
                 $row = mysqli_fetch_assoc($result);
-                $_SESSION['username'] = $row['username'];
+                $_SESSION['username'] = $row['utente'];
                 header("Location: ../home/homeRistoratore.php");
             } else {
                 $_SESSION['errorea'] = 1;

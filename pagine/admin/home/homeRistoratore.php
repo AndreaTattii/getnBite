@@ -16,10 +16,7 @@
 
     <title>GetnBite</title>
     </head>
-    <?php
-		
-  		if(isset($_SESSION['username'])){
-	?>
+    
             <body>
 
             
@@ -82,10 +79,4 @@
             <script src="../../../js/bootstrap.min.js"></script>
         </body>
         </html>
-        <?php
-          }else{
-              
-          }
-          
-	    session_destroy();
-        ?>
+        
