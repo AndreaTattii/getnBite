@@ -166,7 +166,7 @@ CREATE TABLE PietanzaContieneAllergene(
 CREATE TABLE Ristoratore(
 	id int PRIMARY KEY AUTO_INCREMENT,
 	utente varchar(255),
-	password varchar(255)
+	pass varchar(255)
 );
 
 
