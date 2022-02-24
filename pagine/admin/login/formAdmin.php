@@ -48,17 +48,17 @@
         <!-- form -->
         <div id="login" style="margin:5px; padding:20px;">
           
-          <form class="row g-3" action="loginUtente.php" method="post">
+          <form class="row g-3" action="loginAdmin.php" method="post">
         
             <div class="col-12">
               
               <label for="inputAddress" class="form-label">Mail</label>
-              <input type="email" class="form-control" id="mail" name="mail" required>
+              <input type="text" class="form-control" id="username" name="username" required>
 
             </div>
             <div class="col-12">
 
-              <label for="inputAddress2" class="form-label">Password </label>
+              <label for="inputAddress2" class="form-label">Password</label>
               <input type="password" class="form-control" id="password" name="password" required>
 
             </div>

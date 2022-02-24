@@ -20,19 +20,19 @@
         /*  if (isset($_SESSION['email'])) {           
             header("Location: ../../../index.php");
         }  */
-            $email = $_POST['mail'];
+            $username = $_POST['username'];
             $password = $_POST['password'];
             $password = hash("sha256", $password);
 
-            $sql = "SELECT email, pass FROM utente WHERE email='$email' AND pass='$password'";
+            $sql = "SELECT utente, pass FROM ristoratore WHERE utente='$username' AND pass='$password'";
             $result = mysqli_query($connessione, $sql);
             if ($result->num_rows > 0) {
                 $row = mysqli_fetch_assoc($result);
-                $_SESSION['email'] = $row['email'];
-                header("Location: ../../../index.php");
+                $_SESSION['username'] = $row['username'];
+                header("Location: ../home/homeRistoratore.php");
             } else {
-                $_SESSION['errore'] = 1;
-                header("Location: formLogin.php");
+                $_SESSION['errorea'] = 1;
+                header("Location: formAdmin.php");
             }
         
 
