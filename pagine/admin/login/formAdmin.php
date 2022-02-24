@@ -52,7 +52,7 @@
         
             <div class="col-12">
               
-              <label for="inputAddress" class="form-label">Mail</label>
+              <label for="inputAddress" class="form-label">Username</label>
               <input type="text" class="form-control" id="username" name="username" required>
 
             </div>
