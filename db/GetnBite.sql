@@ -29,7 +29,7 @@ CREATE TABLE Fattorino (
 
 CREATE TABLE Consegna(
 	id int PRIMARY KEY AUTO_INCREMENT,
-	orario_partenza TIME,
+	orario_partenza TIME, 
 	orario_arrivo TIME,
 	stato varchar(255) NOT NULL,
 	costo double(10,2),
@@ -48,8 +48,7 @@ CREATE TABLE Utente(
 CREATE TABLE Recensione(
 	id int PRIMARY KEY AUTO_INCREMENT,
 	valutaConsegna int NOT NULL,
-	data_pubblicazione DATE NOT NULL,
-	ora_pubblicazione TIME NOT NULL,
+	data_pubblicazione TIMESTAMP,
 	testo varchar(500) NOT NULL,
 	titolo varchar(255) NOT NULL,
 	punteggio tinyint NOT NULL,
@@ -67,7 +66,7 @@ CREATE TABLE Ordine(
 	id int PRIMARY KEY AUTO_INCREMENT,
 	costo_totale double(10,2) NOT NULL,
 	orario_richiesto TIME NOT NULL,
-	orario TIME NOT NULL,
+	orario TIMESTAMP,
 	idQuartiere int,
 	idUtente int,
 	FOREIGN KEY (idQuartiere) REFERENCES Quartiere(id),
