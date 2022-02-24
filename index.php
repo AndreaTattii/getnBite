@@ -39,7 +39,6 @@
 	 	</div>
 	</div>
 	</nav>
-	<a href="pagine/user/registra/formRegistra.html">registrazione</a>
 	<div style="background-image: url('img/Home/img1.png'); height: 600px">
         <center>
             <br>
