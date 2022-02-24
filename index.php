@@ -15,6 +15,43 @@
   </head>
   <body>
 
+	<?php
+  		if(isset($_SESSION['email'])){
+	?>
+			<!-- NAVABAR PER UTENTE LOGGATO -->
+			
+			
+	<?php
+  		}else{
+	?>
+			<!-- NAVABAR PER UTENTE NON LOGGATO -->
+			<nav class="navbar  navbar-expand-lg">
+					<div class="container p-2">
+						<a class="navbar-brand" href="./">
+							<img src="img/logo.png" alt="" width="80" height="80" class="d-inline-block align-text-top">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									<a class="nav-link" href="">Home<span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="html/login/login.php">Login</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="html/registrati/registrati.html">Registrati</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+	<?php
+		}
+	?>
+  
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
 	<div class="container p-2">
 		<img src="./img/Home/logoScritta.jpg" height="50">
@@ -39,7 +76,9 @@
 	 	</div>
 	</div>
 	</nav>
+	
 	<div style="background-image: url('img/Home/img1.png'); height: 600px">
+		
         <center>
             <br>
             <br>

@@ -24,7 +24,7 @@
     ('$nome','$cognome', '$mail', '$password')";
 
     if($connessione->query($sql) === true){
-        $_SESSION['mail']= $mail;
+        $_SESSION['email']= $mail;
         header("location: ../../../../");
         echo "Utente inserito con successo";
     }else{
