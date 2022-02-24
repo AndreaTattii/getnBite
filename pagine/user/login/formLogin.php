@@ -80,9 +80,7 @@
             <div class="col-12">
               <p style="color: red;">Dati inseriti errati</p>
             </div>
-            <?php }else{
-              echo $_SESSION['email'];
-            }
+            <?php }
               ?>
             <div class="col-12">
               <br>
