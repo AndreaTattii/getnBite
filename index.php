@@ -22,9 +22,9 @@
 			<nav class="navbar  navbar-expand-lg navbar-light bg-light">
 					<div class="container p-2">
 						<a class="navbar-brand" href="./">
-							<img src="./img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+							<img src="img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
 						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" ">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
