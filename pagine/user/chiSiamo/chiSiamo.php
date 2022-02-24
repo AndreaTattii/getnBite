@@ -47,7 +47,7 @@
 			<!-- NAVABAR PER UTENTE NON LOGGATO -->
 			<nav class="navbar  navbar-expand-lg navbar-light bg-light">
 					<div class="container p-2">
-						<a class="navbar-brand" href="./">
+						<a class="navbar-brand" href="../../../../index.php">
 							<img src="../../../img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
@@ -90,9 +90,11 @@
     <div class="container pt-5">
 		<div class="row">
 			<div class="col-sm">
-				<center>
-				 <h2>Il nostro team<h2>
-				</center>
+			<div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                    <center>
+                        <h2>Il nostro team<h2>
+                    </center>
+                </div>
 			</div>
 		</div>
 		<br>

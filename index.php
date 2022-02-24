@@ -22,9 +22,9 @@
 			<nav class="navbar  navbar-expand-lg navbar-light bg-light">
 					<div class="container p-2">
 						<a class="navbar-brand" href="./">
-							<img src="./img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+							<img src="img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
 						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" ">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -42,7 +42,7 @@
 									<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/logout/profilo.php" style="color: black">Profilo</a>
+									<a class="nav-link" href="pagine/user/profilo/profilo.php" style="color: black">Profilo</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="pagine/user/logout/logout.php" style="color: black">Logout</a>
@@ -108,9 +108,11 @@
 	<div class="container pt-5">
 		<div class="row">
 			<div class="col-sm">
-				<center>
-				 <h2>Come funziona l'app<h2>
-				</center>
+			<div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                    <center>
+                        <h2>Come funziona l'app<h2>
+                    </center>
+                </div>
 			</div>
 		</div>
 	</div>

@@ -28,23 +28,23 @@
 						</button>
 						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 							<ul class="navbar-nav">
-								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
+                            <li class="nav-item">
+									<a class="nav-link" href="../../../index.php" style="color: black">Home</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
+									<a class="nav-link" href="../contatti/contatti.php" style="color: black">Contatti</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
+									<a class="nav-link" href="../chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
+									<a class="nav-link" href="../eventi/eventi.php" style="color: black">Eventi</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/logout/profilo.php" style="color: black">Profilo</a>
+                                    <a class="nav-link" href="pagine/user/profilo/profilo.php" style="color: black">Profilo</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/logout/logout.php" style="color: black">Logout</a>
+									<a class="nav-link" href="../logout/logout.php" style="color: black">Logout</a>
 								</li>
 								
 							</ul>
@@ -67,20 +67,23 @@
 						</button>
 						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 							<ul class="navbar-nav">
-								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
+                                <li class="nav-item">
+									<a class="nav-link" href="../../../index.php" style="color: black">Home</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
+									<a class="nav-link" href="../contatti/contatti.php" style="color: black">Contatti</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
+									<a class="nav-link" href="../chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
+									<a class="nav-link" href="../eventi/eventi.php" style="color: black">Eventi</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="pagine/user/login/formLogin.php" style="color: black">Login</a>
+									<a class="nav-link" href="../menu/menu.php" style="color: black">Menù</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="../login/formLogin.php" style="color: black">Login</a>
 								</li>
 							</ul>
 						</div>
@@ -90,20 +93,28 @@
 		}
 	?>
     <br>
-    <div class="container pt-5">
-		<div class="row ">
-			<div class="col-sm">
-				<center>
-				 <h2>Il nostro menù<h2>
-				</center>
-			</div>
-		</div>
-	</div>
+    
+
+        
+
+    
     
     <div class="container g-15">
-		<div class="row align-items-center g-15" >
-			<div class="col-sm ">
-                <div class="card text-center" style="width:350px">
+        <div class="row ">
+			<div class="col-sm">
+                <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                    <center>
+                        <h2>Il nostro menù<h2>
+                    </center>
+                </div>
+			</div>
+		</div>
+
+        <br>
+
+		<div class="row justify-content-center g-5" >
+			<div class="col-sm align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                     <img class="card-img-top" src="../../../img/menu/antipasti.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -113,8 +124,8 @@
                 </div>
             </div>
 
-            <div class="col-sm">
-                <div class="card text-center" style="width:350px">
+            <div class="col-sm align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                     <img class="card-img-top" src="../../../img/menu/primi.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -124,8 +135,8 @@
                 </div>
 		    </div>
 
-            <div class="col-sm">
-                <div class="card text-center" style="width:350px">
+            <div class="col-sm align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                 <img class="card-img-top" src="../../../img/menu/secondi.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -135,10 +146,10 @@
                 </div>
             </div>
         </div>    
-        
-        <div class="row align-items-center g-15">
-            <div class="col-sm-4">
-                <div class="card text-center" style="width:350px">
+        <br>
+        <div class="row justify-content-center g-5">
+            <div class="col-sm-4 align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                 <img class="card-img-top" src="../../../img/menu/pizze.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -147,8 +158,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card text-center" style="width:350px">
+            <div class="col-sm-4 align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                 <img class="card-img-top" src="../../../img/menu/contorni.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -157,8 +168,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card text-center" style="width:350px">
+            <div class="col-sm-4 align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                 <img class="card-img-top" src="../../../img/menu/dolci.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -168,10 +179,10 @@
                 </div>
             </div>
         </div>
-        
-        <div class="row align-items-center g-15">
-            <div class="col-sm-4">
-                <div class="card text-center" style="width:350px">
+        <br>
+        <div class="row justify-content-center g-5">
+            <div class="col-sm-4 align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                 <img class="card-img-top" src="../../../img/menu/amari.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -180,8 +191,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card text-center" style="width:350px">
+            <div class="col-sm-4 align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                 <img class="card-img-top" src="../../../img/menu/caffe.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
@@ -190,8 +201,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card text-center" style="width:350px">
+            <div class="col-sm-4 align-self-center">
+                <div class="card text-center align-self-center" style="width:350px">
                 <img class="card-img-top" src="../../../img/menu/bibite.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         

@@ -169,8 +169,13 @@ CREATE TABLE Ristoratore(
 	pass varchar(255)
 );
 
+INSERT INTO Ristoratore (utente, pass) VALUES 
+    ('admin','a2242ead55c94c3deb7cf2340bfef9d5bcaca22dfe66e646745ee4371c633fc8')
 
-
+/*
+	nome utente: admin
+	password:'pippo'
+*/
 
 
 
