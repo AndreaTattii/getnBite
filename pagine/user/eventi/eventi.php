@@ -50,8 +50,8 @@
 			<!-- NAVABAR PER UTENTE NON LOGGATO -->
 			<nav class="navbar  navbar-expand-lg">
 					<div class="container p-2">
-						<a class="navbar-brand" href="./">
-							<img src="../../../img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+						<a class="navbar-brand" href="../../../index.php">
+							<img src="../../../img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
 							<span class="navbar-toggler-icon"></span>
