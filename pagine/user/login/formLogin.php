@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 
@@ -74,9 +75,8 @@
             </div>
             <br><br>
             <?php  //SOLUZIONE: nell'index.php settare la variabile di sessione "errore" a 1, in modo tale che non si entri nell'if
-            session_start();
-            //$_SESSION['errore']=1; Riga da mettere nell'index.php
-             if (($_SESSION['errore']==NULL)){ ?>
+            //$_SESSION['errore']=1;
+             if (isset($_SESSION['errore'])){ ?>
             <div class="col-12">
               <p style="color: red;">Dati inseriti errati</p>
             </div>
@@ -120,3 +120,4 @@
 </body>
 
 </html>
+<?php session_destroy(); ?>

@@ -58,7 +58,7 @@
                 $_SESSION['email'] = $row['email'];
                 header("Location: ../../../index.php");
             } else {
-                $_SESSION['errore'] = NULL;
+                $_SESSION['errore'] = 1;
                 header("Location: formLogin.php");
             }
         
