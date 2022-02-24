@@ -98,7 +98,7 @@
               <img src="../../../img/Admin/favpng_writing-infographic-writer-homework-essay 1.png" width="60%">
             </div>
             <div class="row center-text"> 
-              <h1 style="font-family: 'Playfair Display';font-size: 30px; color: white;">Mangia con GetnBite</h1>
+              <h1 style="font-family: 'Playfair Display';font-size: 30px; color: white;">Gestisci il tuo ristorante</h1>
             </div>
           </div>
         </div>

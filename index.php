@@ -194,7 +194,7 @@
 				<img src="./img/Home/logoScritta.jpg" width="400" class="mb-3">
 			</div>
 			<div style="position: relative; left: 700px;">
-				<p style="text-align: center;">Login</p>
+				<a href="pagine/admin/login/formAdmin.php" style="text-decoration: none; color: #00E1A5; text-align: center;"><p>Admin</p></a>
 				<p style="text-align: center;">Copyright 2022 GetnBite.com</p>
 				<p style="text-align: center;">Partita IVA 02070920992</p>
 			</div>
