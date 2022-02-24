@@ -1,7 +1,8 @@
 
     <?php
         
-
+        session_start(); 
+        
         $host="127.0.0.1";
         $user="root";
         $pass="";
@@ -15,7 +16,7 @@
             echo "Errore: ".$connessione->error;
         }
        
-        session_start();
+        
         
         if (isset($_SESSION['email'])) {           
             header("Location: ../../../index.php");
