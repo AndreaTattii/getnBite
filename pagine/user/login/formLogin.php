@@ -80,7 +80,10 @@
             <div class="col-12">
               <p style="color: red;">Dati inseriti errati</p>
             </div>
-            <?php } session_destroy();?>
+            <?php }else{
+              echo $_SESSION['email'];
+            }
+              ?>
             <div class="col-12">
               <br>
               <button type="submit" class="btn btn-primary" style="background-color: #00E1A5; border-color: black;">Accedi</button>
