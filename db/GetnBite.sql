@@ -163,7 +163,11 @@ CREATE TABLE PietanzaContieneAllergene(
 	FOREIGN KEY (idPietanza) REFERENCES Pietanza(id),
 	FOREIGN KEY (idAllergene) REFERENCES Allergene(id)
 );
-
+CREATE TABLE Ristoratore(
+	id int PRIMARY KEY AUTO_INCREMENT,
+	utente varchar(255),
+	password varchar(255)
+);
 
 
 
