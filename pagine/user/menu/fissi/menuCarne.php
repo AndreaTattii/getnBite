@@ -14,24 +14,66 @@
     <title>Menù di pesce</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
-	<div class="container p-2">
-					<img src="../../../../img/Home/logoScritta.jpg" height="50">
-	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="../../../../index.php" style="color: black">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="../../eventi/eventi.php" style="color: black">Eventi</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="../../../../pagine/user/login.php" style="color: black">Login</a>
-			</li>
-		</ul>
-	 </div>
-	</div>
-	</nav>
+  <?php
+		session_start();
+  		if(isset($_SESSION['email'])){
+	?>
+			<nav class="navbar  navbar-expand-lg">
+					<div class="container p-2">
+						<a class="navbar-brand" href="./">
+							<img src="../../../img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="../../../index.php" style="color: black">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="../../../pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="../../../pagine/user/logout/logout.php" style="color: black">Logout</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</nav>
+			
+			
+	<?php
+  		}else{
+	?>
+			<!-- NAVABAR PER UTENTE NON LOGGATO -->
+			<nav class="navbar  navbar-expand-lg">
+					<div class="container p-2">
+						<a class="navbar-brand" href="./">
+							<img src="../../../img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="../../../index.php" style="color: black">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="../../../pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="../../../pagine/user/login/formLogin.php" style="color: black">Login</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+	<?php
+		}
+	?>
 
     <div style="background-image: url('../../../../img/Eventi/img1.png'); height: 500px">
         <center>

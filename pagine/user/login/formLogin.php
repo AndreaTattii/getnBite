@@ -74,14 +74,15 @@
               </div>
             </div>
             <br><br>
-            <?php  //SOLUZIONE: nell'index.php settare la variabile di sessione "errore" a 1, in modo tale che non si entri nell'if
-            //$_SESSION['errore']=1;
+            <?php  
+            
              if (isset($_SESSION['errore'])){ ?>
-            <div class="col-12">
-              <p style="color: red;">Dati inseriti errati</p>
-            </div>
-            <?php }
-              ?>
+              <div class="col-12">
+                <p style="color: red;">Dati inseriti errati</p>
+              </div>
+            <?php 
+            }
+            ?>
             <div class="col-12">
               <br>
               <button type="submit" class="btn btn-primary" style="background-color: #00E1A5; border-color: black;">Accedi</button>

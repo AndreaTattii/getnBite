@@ -16,9 +16,42 @@
   <body>
 
 	<?php
+		session_start();
   		if(isset($_SESSION['email'])){
 	?>
-			<!-- NAVABAR PER UTENTE LOGGATO -->
+			<nav class="navbar  navbar-expand-lg">
+					<div class="container p-2">
+						<a class="navbar-brand" href="./">
+							<img src="./img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/logout/profilo.php" style="color: black">Profilo</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/logout/logout.php" style="color: black">Logout</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</nav>
 			
 			
 	<?php
@@ -28,21 +61,27 @@
 			<nav class="navbar  navbar-expand-lg">
 					<div class="container p-2">
 						<a class="navbar-brand" href="./">
-							<img src="img/logo.png" alt="" width="80" height="80" class="d-inline-block align-text-top">
+							<img src="./img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
 						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 							<ul class="navbar-nav">
-								<li class="nav-item active">
-									<a class="nav-link" href="">Home<span class="sr-only">(current)</span></a>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="html/login/login.php">Login</a>
+									<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="html/registrati/registrati.html">Registrati</a>
+									<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pagine/user/login/formLogin.php" style="color: black">Login</a>
 								</li>
 							</ul>
 						</div>
@@ -51,32 +90,7 @@
 	<?php
 		}
 	?>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
-	<div class="container p-2">
-		<img src="./img/Home/logoScritta.jpg" height="50">
-		<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="pagine/user/contatti/contatti.php" style="color: black">Contatti</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="pagine/user/chiSiamo/chiSiamo.php" style="color: black">Chi siamo</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="pagine/user/eventi/eventi.php" style="color: black">Eventi</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Menù</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="pagine/user/login/formLogin.php" style="color: black">Login</a>
-				</li>
-			</ul>
-	 	</div>
-	</div>
-	</nav>
-	
+  	
 	<div style="background-image: url('img/Home/img1.png'); height: 600px">
 		
         <center>
@@ -87,11 +101,7 @@
             <p style="color: white; font-size:20px;">Facile da ordinare.</p>
             <p style="color: white; font-size:20px;">Buono da mangiare.</p> 
 			<br>
-			<form action="menu.php">
-				<button type="submit" style="background-color: #00E1A5; font-size:50px; border-radius: 50px; width: 400px; color: white">
-					<b>Ordina ora!</b>
-				</button>  
-			</form>
+			
         </center>
     </div>
 	
@@ -196,3 +206,6 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+<?php
+	session_destroy();
+?>
