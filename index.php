@@ -190,22 +190,39 @@
 			<img src="./img/Home/img5.png" class="d-block w-100" alt="...">
 		  </div>
 		</div>
-		  </div>
-	<footer class="p-3 mb-2 bg-white text-dark">
-		<div class="container py-16 px-1">
-		  <div class="row py-4">
-			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-				<img src="./img/Home/logoScritta.jpg" width="400" class="mb-3">
+	</div>
+
+	<div class="footer-clean">
+		<footer>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-sm-4 col-md-3 item">
+						<a class="navbar-brand" href="./">
+							<img src="img/logo.jpeg" alt="" width="150" height="150" class="d-inline-block align-text-top">
+						</a>
+					</div>
+					<div class="col-sm-4 col-md-3 item">
+						<h3>Moderatori</h3>
+						<ul>
+							<li><a href="html/registraEvento/formAggiungiEvento.php">Login</a></li>
+							<li><a href="#">Partita Iva: 02070920992</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-md-3 item">
+						<h3>Info</h3>
+						<ul>
+							<li><a href="https://www.google.it/maps/@44.4474048,8.8751889,14z">Sede legale</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 item social"><a href="https://it-it.facebook.com/"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/?lang=it"><i class="icon ion-social-twitter"></i></a><a href="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fwelcome"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a>
+						<p class="copyright">Prenota One © 2021</p>
+					</div>
+				</div>
 			</div>
-			<div style="position: relative; left: 700px;">
-				<a href="pagine/admin/login/formAdmin.php" style="text-decoration: none; color: #00E1A5; text-align: center;"><p>Admin</p></a>
-				<p style="text-align: center;">Copyright 2022 GetnBite.com</p>
-				<p style="text-align: center;">Partita IVA 02070920992</p>
-			</div>
-		  </div>
-		</div>
-		</div>
-	</footer>
+		</footer>
+	</div>
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
