@@ -1,5 +1,5 @@
 <?php  
-
+session_start()
 $host="127.0.0.1";
 $user="root";
 $pass="";
@@ -13,7 +13,7 @@ $database="getnbite";
       $query = "INSERT INTO pietanza(url_img) VALUES ('$file')";  
       if(mysqli_query($connect, $query))  
       {  
-           echo '<script>alert("Image Inserted into Database")</script>';  
+           echo '<script>alert("Immagine inserita correttamente nel database")</script>';  
       }  
  }  
  ?>  
