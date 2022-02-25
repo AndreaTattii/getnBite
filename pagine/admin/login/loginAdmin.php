@@ -12,7 +12,7 @@
         error_reporting(0);
 
         if($connessione === false){
-            echo "Errore: ".$connessione->error;
+            die("Errore: ".$connessione->connect_error);
         }
        
         
