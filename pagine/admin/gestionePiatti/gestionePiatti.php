@@ -1,83 +1,115 @@
-<?php  
-session_start()
-$host="127.0.0.1";
-$user="root";
-$pass="";
-$database="getnbite";
+<?php
+	session_start();
+?>
+<!doctype html>
+<html lang="en">
+   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
- $connect = mysqli_connect($host, $user, $pass, $database);  
+	<!-- CSS Personale-->
+	<link rel="stylesheet" href="../../../cssPersonal/style.css">
 
- if(isset($_POST["insert"]))  
- {  
-      $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  
-      $query = "INSERT INTO pietanza(url_img) VALUES ('$file')";  
-      if(mysqli_query($connect, $query))  
-      {  
-           echo '<script>alert("Immagine inserita correttamente nel database")</script>';  
-      }  
- }  
- ?>  
- <!DOCTYPE html>  
- <html>  
-      <head>  
-           <title>Prova inserimento e visualizzazione immagine</title>  
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-      </head>  
-      <body>  
-           <br /><br />  
-           <div class="container" style="width:500px;">  
-                <h3 style="align:center;">Prova inserimento immagini e visualizzazione</h3>  
-                <br />  
-                <form method="post" enctype="multipart/form-data">  
-                     <input type="file" name="image" id="image" />  
-                     <br />  
-                     <input type="submit" name="insert" id="insert" value="Inserisci" class="btn btn-info" />  
-                </form>  
-                <br />  
-                <br />  
-                <table class="table table-bordered">  
-                     <tr>  
-                          <th>Image</th>  
-                     </tr>  
-                <?php  
-                $query = "SELECT url_img FROM pietanza ORDER BY id";  
-                $result = mysqli_query($connect, $query);  
-                while($row = mysqli_fetch_array($result))  
-                {  
-                     echo '  
-                          <tr>  
-                               <td>  
-                                    <img src="data:image/jpeg;base64,'.base64_encode($row['url_img'] ).'" height="200" width="200" class="img-thumnail" />  
-                               </td>  
-                          </tr>  
-                     ';  
-                }  
-                ?>  
-                </table>  
-           </div>  
-      </body>  
- </html>  
- <script>  
- $(document).ready(function(){  
-      $('#insert').click(function(){  
-           var image_name = $('#image').val();  
-           if(image_name == '')  
-           {  
-                alert("Please Select Image");  
-                return false;  
-           }  
-           else  
-           {  
-                var extension = $('#image').val().split('.').pop().toLowerCase();  
-                if(jQuery.inArray(extension, ['png','jpg','jpeg']) == -1)  
-                {  
-                     alert('Invalid Image File');  
-                     $('#image').val('');  
-                     return false;  
-                }  
-           }  
-      });  
- });  
- </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <title>GetnBite</title>
+    </head>
+    
+            <body>
+
+            
+                <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+                    <div class="container p-2">
+                        <a class="navbar-brand" href="./">
+                            <img src="../../../img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../recensioni/recensioni.php" style="color: black">Recensioni</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../gestionePiatti/gestionePiatti.php" style="color: black">Gestione menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../consegne/consegne.php" style="color: black">Ordini</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../logout/logout.php" style="color: black">Logout</a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                
+                <div class="container">
+                    <row class="row">
+                        <div class="col">
+                            <h1 style="font-family: 'Poppins'; text-align: center;">Il tuo ristorante</h1>
+                        </div>
+                    </row>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px; text-align: center;">
+                            <br>
+                                <container>
+                                    <div class="row justify-content-center ">
+                                        <div class="col sm-2">
+                                            <img src="img/Vector.png" width="40" class="mb-3">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row justify-content-center ">
+                                        <div class="col sm-6">
+                                            <h2>Inserisci piatti<h2>
+                                        </div>
+                                    </div>
+                                </container> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+        <br>
+        <div class="footer-clean">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-4 ">
+                            <a class="navbar-brand" href="./">
+                                <img src="../../../img/home/logoScritta.png" alt=""  height="60" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="col-4" ></div>
+                            <center>
+                                <p style="text-decoration: none; color:black">Partita Iva: 02070920992</p>
+                                <p>GetnBite ©</p> 
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+	</div>
+            
+            
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="../../../js/bootstrap.min.js"></script>
+        </body>
+        </html>
+        <?php
+            
+        ?>
