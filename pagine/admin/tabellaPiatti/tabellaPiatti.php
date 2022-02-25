@@ -73,26 +73,57 @@
 				</div>
 				<br>
 				<br>
+                
+                <!-- mettere qui php -->
+                <?php
 
-                <center>
-                <table>
-                    <tr>
-                        <th>Company</th>
-                        <th>Contact</th>
-                        <th>Country</th>
-                    </tr>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                    </tr>
-                </table>
-                </center>
+                    $host="127.0.0.1";
+                    $user="root";
+                    $pass="";
+                    $database="getnbite";
+                
+                    $connessione= new mysqli($host, $user, $pass , $database);
+                    
+                    error_reporting(0);
+            
+                    if($connessione === false){
+                        die("Errore: ".$connessione->connect_error);
+                    }
+
+                    $sql= "SELECT * FROM pietanza";
+                    if($result = $connessione->query($sql)){
+                        if($result->num_rows > 0){
+                            echo'
+                            <center>
+                            <table>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                </tr>';
+                            while($row=$result->fetch_array()){
+                                echo '
+                                <tr>
+                                    <td>' . $row['id'] . ' </td>
+                                    <td>' . $row['nome'] . ' </td>
+                                </tr>
+                                ';
+                            }
+                            echo "</table></center>";
+                        }else{
+                            echo "Non ci sono più righe nella query";
+                        }
+                    }else{
+                        echo "Impossibile eseguire la query";
+                    }
+
+
+
+
+
+
+                ?>
+
+                
 		
 		<!-- footer -->
 	   <br>
