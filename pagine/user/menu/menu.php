@@ -230,7 +230,7 @@
 		<div class="container py-16 px-1">
 		  <div class="row py-4">
 			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-				<img src="../../../img/Home/logoScritta.jpg" width="400" class="mb-3">
+				<img src="../../../img/Home/logoScritta.png" width="400" class="mb-3">
 			</div>
 			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0" style="position: relative; left: 700px;">
 				<p style="text-align: center;">Login</p>
