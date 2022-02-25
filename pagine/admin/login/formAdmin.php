@@ -32,7 +32,7 @@
       <div class="col-sm-6">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background:#ffffff">
           <div class="container p-2">
-          <a href="../../../index.php"><img src="../../../img/Home/logoScritta.jpg" height="50"></a>
+          <a href="../../../index.php"><img src="../../../img/Home/logoScritta.png" height="50"></a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item">

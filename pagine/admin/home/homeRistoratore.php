@@ -43,7 +43,7 @@
                                     <a class="nav-link" href="../consegne/consegne.php" style="color: black">Ordini</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pagine/user/menu/menu.php" style="color: black">Logout</a>
+                                    <a class="nav-link" href="../logout/logout.php" style="color: black">Logout</a>
                                 </li>
                                 
                                 
@@ -104,24 +104,31 @@
                                 echo 
                                 '<p style="">Hai effettuato '
                                 .$result->num_rows.
-                                ' consegne.</p>' 
-                                .'<br>
-                                '; 
-/*
+                                ' consegne.</p>' ; 
+
                                 $sql = "SELECT SUM(costo_totale) FROM ordine";
                                 $result = mysqli_query($connessione, $sql);
+                                
+                                $result = mysqli_fetch_assoc($result);
+                                echo "Per un ammontare di: ".$result["SUM(costo_totale)"].
+                                ".";
 
-                                $result = (string)$result;
-                                echo "Per un ammontare di:".$result;
-*/
                             ?>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col">
                             <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;  ">
                                 <h2 style="color: #00E1A5;">I piatti più ordinati sono</h2>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <?php
+                                $connesione->query($sql);
+                            ?>
                         </div>
                     </div>
 
