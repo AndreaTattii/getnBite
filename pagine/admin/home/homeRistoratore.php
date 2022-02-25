@@ -37,7 +37,7 @@
                                     <a class="nav-link" href="../recensioni/recensioni.php" style="color: black">Recensioni</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../gestionePiatti.php/gestionePiatti.php" style="color: black">Gestione menu</a>
+                                    <a class="nav-link" href="../gestionePiatti/gestionePiatti.php" style="color: black">Gestione menu</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../consegne/consegne.php" style="color: black">Ordini</a>
@@ -64,6 +64,7 @@
                     <div class="row justify-content-center">
                         <div class="col-4">
                             <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px; text-align: center;">
+                            <br>
                                 <container>
                                     <div class="row justify-content-center ">
                                         <div class="col sm-2">
@@ -110,7 +111,7 @@
                                 $result = mysqli_query($connessione, $sql);
                                 
                                 $result = mysqli_fetch_assoc($result);
-                                echo "Per un ammontare di: ".$result["SUM(costo_totale)"].
+                                echo "Per un ammontare di: €".$result["SUM(costo_totale)"].
                                 ".";
 
                             ?>
@@ -121,41 +122,67 @@
                         <div class="col">
                             <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;  ">
                                 <h2 style="color: #00E1A5;">I piatti più ordinati sono</h2>
+                                <p>
+                                    Aute eu elit in sint veniam officia veniam mollit. Deserunt aliquip mollit in magna exercitation sunt proident. Amet id tempor consectetur reprehenderit incididunt exercitation minim quis velit dolore duis excepteur. Consectetur esse excepteur tempor sit proident sit. Elit duis proident nisi Lorem tempor deserunt ex voluptate reprehenderit. Nulla ullamco et fugiat voluptate minim laboris commodo. Cupidatat sit tempor do veniam est.
+                                </p>
                             </div>
+
                         </div>
                     </div>
+                    
+                    
                     <div class="row">
                         <div class="col">
-                            <?php
-                                $connesione->query($sql);
-                            ?>
+                            <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;  ">
+                                <h2 style="color: #00E1A5;">I piatti più apprezzati sono</h2>
+                                <p>
+                                    Aute eu elit in sint veniam officia veniam mollit. Deserunt aliquip mollit in magna exercitation sunt proident. Amet id tempor consectetur reprehenderit incididunt exercitation minim quis velit dolore duis excepteur. Consectetur esse excepteur tempor sit proident sit. Elit duis proident nisi Lorem tempor deserunt ex voluptate reprehenderit. Nulla ullamco et fugiat voluptate minim laboris commodo. Cupidatat sit tempor do veniam est.
+                                </p>
+                            </div>
+
                         </div>
                     </div>
-
-
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;  ">
+                                <h2 style="color: #00E1A5;">I piatti più invitanti sono</h2>
+                                <p>
+                                    Aute eu elit in sint veniam officia veniam mollit. Deserunt aliquip mollit in magna exercitation sunt proident. Amet id tempor consectetur reprehenderit incididunt exercitation minim quis velit dolore duis excepteur. Consectetur esse excepteur tempor sit proident sit. Elit duis proident nisi Lorem tempor deserunt ex voluptate reprehenderit. Nulla ullamco et fugiat voluptate minim laboris commodo. Cupidatat sit tempor do veniam est.
+                                </p>
+                            </div>
+                         </div>
+                    </div>
                 </div>
                     
-            
-            
-            
-            
-            <footer class="p-3 mb-2 bg-white text-dark">
-                <div class="container py-16 px-1">
-                <div class="row py-4">
-                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                        <img src="../../../img/Home/logoScritta.png" width="400" class="mb-3">
+        <br>
+        <div class="footer-clean">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-4 ">
+                            <a class="navbar-brand" href="./">
+                                <img src="../../../img/home/logoScritta.png" alt=""  height="60" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="col-4" ></div>
+                            <center>
+                                <p style="text-decoration: none; color:black">Partita Iva: 02070920992</p>
+                                <p>GetnBite ©</p> 
+                            </center>
+                        </div>
                     </div>
-                    <div style="position: relative; left: 700px;">
-                        <a href="pagine/admin/login/formAdmin.php" style="text-decoration: none; color: #00E1A5; text-align: center;"><p>Admin</p></a>
-                        <p style="text-align: center;">Copyright 2022 GetnBite.com</p>
-                        <p style="text-align: center;">Partita IVA 02070920992</p>
-                    </div>
-                </div>
-                </div>
                 </div>
             </footer>
+	</div>
+            
+            
+            
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="../../../js/bootstrap.min.js"></script>
         </body>
         </html>
+        <?php
+            
+        ?>
         

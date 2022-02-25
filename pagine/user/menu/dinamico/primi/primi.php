@@ -190,21 +190,27 @@
 		</div>
 	</div>
 
-    <footer class="p-3 mb-2 bg-white text-dark">
-		<div class="container py-16 px-1">
-		  <div class="row py-4">
-			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-				<img src="./img/Home/logoScritta.jpg" width="400" class="mb-3">
+    <div class="footer-clean">
+		<footer>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-4 ">
+						<a class="navbar-brand" href="./">
+							<img src="img/home/logoScritta.png" alt=""  height="60" class="d-inline-block align-text-top">
+						</a>
+					</div>
+					<div class="col-4" ></div>
+							<center>
+								<a href="../../../../pagine/admin/login/formAdmin.php" style="text-decoration: none; color:black">Login Admin</a>
+								<p style="text-decoration: none; color:black">Partita Iva: 02070920992</p>
+								<p>GetnBite ©</p> 
+							</center>
+					</div>
+				</div>
 			</div>
-			<div style="position: relative; left: 700px;">
-				<p style="text-align: center;">Login</p>
-				<p style="text-align: center;">Copyright 2022 GetnBite.com</p>
-				<p style="text-align: center;">Partita IVA 02070920992</p>
-			</div>
-		  </div>
-		</div>
-		</div>
-	  </footer>
+		</footer>
+	</div>
+
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>

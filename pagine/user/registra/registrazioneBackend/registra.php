@@ -20,7 +20,7 @@
     //hashing della password
     $password = hash("sha256", $password);
 
-    $sql="INSERT INTO utente (nome, cognome, email, pass) VALUES 
+    $sql = "INSERT INTO utente (nome, cognome, email, pass) VALUES 
     ('$nome','$cognome', '$mail', '$password')";
 
     if($connessione->query($sql) === true){
