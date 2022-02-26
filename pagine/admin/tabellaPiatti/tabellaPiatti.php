@@ -40,6 +40,9 @@
 							 <a class="nav-link" href="../gestionePiatti/gestionePiatti.php" style="color: black">Gestione menu</a>
 						  </li>
 						  <li class="nav-item">
+                                    <a class="nav-link" href="../tabellaPiatti/tabellaPiatti.php" style="color: black">I tuoi piatti</a>
+                          </li>
+						  <li class="nav-item">
 							 <a class="nav-link" href="../consegne/consegne.php" style="color: black">Ordini</a>
 						  </li>
 						  <li class="nav-item">
@@ -64,7 +67,7 @@
 						  <container>
 							 <div class="row justify-content-center ">
 								<div class="col sm-6">
-								    <h2>Inserisci piatti<h2>
+								    <h2>I tuoi piatti<h2>
 								</div>
 							 </div>
 						  </container> 
@@ -95,16 +98,16 @@
                         if($result->num_rows > 0){
                             echo'
                             <center>
-                            <table>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Nome</th>
+                            <table style="border: 3px solid; border-color: #00E1A5;" >
+                                <tr style="border: 3px solid; border-color: #black;">
+                                    <th style="border: 3px solid; border-color: black;">Id</th>
+                                    <th style="border: 3px solid; border-color: black;">Nome</th>
                                 </tr>';
                             while($row=$result->fetch_array()){
                                 echo '
-                                <tr>
-                                    <td>' . $row['id'] . ' </td>
-                                    <td>' . $row['nome'] . ' </td>
+                                <tr style="border: 3px solid; border-color: #00E1A5;">
+                                    <td style="border: 3px solid; border-color: #00E1A5;">' . $row['id'] . ' </td>
+                                    <td style="border: 3px solid; border-color: #00E1A5;">' . $row['nome'] . ' </td>
                                 </tr>
                                 ';
                             }

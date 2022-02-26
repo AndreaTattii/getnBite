@@ -40,6 +40,9 @@
                                     <a class="nav-link" href="../gestionePiatti/gestionePiatti.php" style="color: black">Gestione menu</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="../tabellaPiatti/tabellaPiatti.php" style="color: black">I tuoi piatti</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="../consegne/consegne.php" style="color: black">Ordini</a>
                                 </li>
                                 <li class="nav-item">
