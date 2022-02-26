@@ -114,14 +114,14 @@
 
 		<div class="row justify-content-center g-5" >
 			<div class="col-sm align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
+                <a href="dinamico/antipasti/antipasti.php"><div class="card text-center align-self-center" style="width:350px">
                     <img class="card-img-top" src="../../../img/menu/antipasti.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="antipasti.php"><b>ANTIPASTI</b></a></p>
+                            <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/antipasti/antipasti.php"><b>ANTIPASTI</b></a></p>
                         
                     </div>
-                </div>
+                </div></a>
             </div>
 
             <div class="col-sm align-self-center">
