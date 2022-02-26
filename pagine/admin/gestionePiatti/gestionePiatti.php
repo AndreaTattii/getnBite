@@ -82,7 +82,7 @@ session_start();
           <form class="row g-3">
                <div class="col-md-6">
                     <label class="form-label">Nome piatto</label>
-                    <input type="text" class="form-control" name="piatto" id="piatto">
+                    <input type="text" class="form-control" name="nome" id="nome">
                </div>
                <div class="col-md-6">
                     <label for="inputPassword4" class="form-label">Immagine del piatto</label>
@@ -93,13 +93,80 @@ session_start();
                <br>
                <br>
                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Descrizione</label>
-                    <textarea class="form-control" placeholder="Scrivi qui." name="recensione" id="recensione"></textarea>
+                    <label class="form-label">Descrizione</label>
+                    <textarea class="form-control" placeholder="Scrivi qui." name="descrizione" id="descrizione"></textarea>
                     <br>
                     <br>
 
                </div>
-               
+
+               <div class="row">
+                    <div class="col-2">
+                         <label class="form-label">Prezzo</label>
+                         <input type="number" class="form-control" placeholder="€" name="prezzo" id="prezzo"></input>
+                         <br>
+                         <br>
+                    </div>
+                    <div class="col-7">
+                         <div class="container">
+                              <div class="row">
+                                   <div class="col-12">
+                                        <h4>Sezione</h4>
+                                   </div>
+
+                              </div>
+                              <div class="row">
+                                   <div class="col-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Default checked radio
+                                             </label>
+                                        </div>
+                                   </div>
+                                   <div class="col-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Default checked radio
+                                             </label>
+                                        </div>
+                                   </div> 
+                                   <div class="col-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Default checked radio
+                                             </label>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="row">
+                                   <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                             Default checked radio
+                                        </label>
+                                   </div>
+                              </div><div class="row">
+                                   <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                             Default checked radio
+                                        </label>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-3">
+                         <form action="../tabellaPiatti/tabellaPiatti.php">
+                              <input type="submit" style="background-color: #00E1A5; color: white; display: inline-block; cursor: pointer; text-align: center; text-decoration: none; outline: none; border: none;  border-radius: 30px; height: 50px" value="Visualizza i tuoi piatti">
+                         </form>
+                    </div>
+               </div>
+
+
+
                <div style="border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
                     <div class="container">
 
@@ -145,14 +212,14 @@ session_start();
                          </div>
 
 
-                         
+
                     </div>
                </div>
-                    
-               
 
-               
-               
+
+
+
+
                <div class="col-12">
                     <br>
                     <br>
@@ -164,9 +231,7 @@ session_start();
      <br>
      <br>
      <center>
-          <form action="../tabellaPiatti/tabellaPiatti.php">
-               <input type="submit" style="background-color: #00E1A5; color: white; display: inline-block; cursor: pointer; text-align: center; text-decoration: none; outline: none; border: none;  border-radius: 30px; height: 50px" value="Visualizza i tuoi piatti">
-          </form>
+
      </center>
 
      <br>

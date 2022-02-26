@@ -194,7 +194,7 @@ INSERT INTO Allergene (nome) values('molluschi');
 
 
 /*riempimento tabella ingredienti*/
-INSERT INTO Ingrediente (nome) values('spahettti');
+INSERT INTO Ingrediente (nome, allergene) values('spahetti','glutine');
 INSERT INTO Ingrediente (nome) values('guanciale');
 INSERT INTO Ingrediente (nome) values('uova');
 INSERT INTO Ingrediente (nome) values('pecorino');
