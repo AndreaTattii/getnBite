@@ -108,7 +108,8 @@ CREATE TABLE Pietanza(
 
 CREATE TABLE Ingrediente(
 	id int PRIMARY KEY AUTO_INCREMENT,
-	nome varchar(255) NOT NULL UNIQUE
+	nome varchar(255) NOT NULL UNIQUE,
+	allergene varchar(255)
 );
 
 CREATE TABLE Allergene(
@@ -148,21 +149,6 @@ CREATE TABLE PietanzaContieneIngrediente(
 	FOREIGN KEY (idIngrediente) REFERENCES Ingrediente(id)
 );
 
-CREATE TABLE IngredienteContieneAllergene(
-	idIngrediente int,
-	idAllergene int,
-	PRIMARY KEY (idIngrediente, idAllergene),
-	FOREIGN KEY (idAllergene) REFERENCES Allergene(id),
-	FOREIGN KEY (idIngrediente) REFERENCES Ingrediente(id)
-);
-
-CREATE TABLE PietanzaContieneAllergene(
-	idPietanza int,
-	idAllergene int,
-	PRIMARY KEY (idPietanza, idAllergene),
-	FOREIGN KEY (idPietanza) REFERENCES Pietanza(id),
-	FOREIGN KEY (idAllergene) REFERENCES Allergene(id)
-);
 CREATE TABLE Ristoratore(
 	id int PRIMARY KEY AUTO_INCREMENT,
 	utente varchar(255),
@@ -177,184 +163,169 @@ INSERT INTO Ristoratore (utente, pass) VALUES
 	password:'pippo'
 */
 
-/*riempimento tabella allergeni*/
-INSERT INTO Allergene (nome) values('glutine');
-INSERT INTO Allergene (nome) values('crostacei');
-INSERT INTO Allergene (nome) values('uova');
-INSERT INTO Allergene (nome) values('pesce');
-INSERT INTO Allergene (nome) values('arachidi');
-INSERT INTO Allergene (nome) values('soia');
-INSERT INTO Allergene (nome) values('latte');
-INSERT INTO Allergene (nome) values('frutta con guscio');
-INSERT INTO Allergene (nome) values('sedano');
-INSERT INTO Allergene (nome) values('senape'); 
-INSERT INTO Allergene (nome) values('semi di sesamo');
-INSERT INTO Allergene (nome) values('lupino');
-INSERT INTO Allergene (nome) values('molluschi');
-
 
 /*riempimento tabella ingredienti*/
 INSERT INTO Ingrediente (nome, allergene) values('spahetti','glutine');
-INSERT INTO Ingrediente (nome) values('guanciale');
-INSERT INTO Ingrediente (nome) values('uova');
-INSERT INTO Ingrediente (nome) values('pecorino');
-INSERT INTO Ingrediente (nome) values('tuorlo');
-INSERT INTO Ingrediente (nome) values('albume');
-INSERT INTO Ingrediente (nome) values('pepe nero');
-INSERT INTO Ingrediente (nome) values('cipolla');
-INSERT INTO Ingrediente (nome) values('peperoncino');
-INSERT INTO Ingrediente (nome) values('strutto');
-INSERT INTO Ingrediente (nome) values('pasta');
-INSERT INTO Ingrediente (nome) values('pomodoro');
-INSERT INTO Ingrediente (nome) values('basilico');
-INSERT INTO Ingrediente (nome) values('trofie');
-INSERT INTO Ingrediente (nome) values('pesto');
-INSERT INTO Ingrediente (nome) values('vongole');
-INSERT INTO Ingrediente (nome) values('scampi');
-INSERT INTO Ingrediente (nome) values('prezzemolo');
-INSERT INTO Ingrediente (nome) values('cozze');
-INSERT INTO Ingrediente (nome) values('aglio');
-INSERT INTO Ingrediente (nome) values('bietole');
-INSERT INTO Ingrediente (nome) values('ricotta');
-INSERT INTO Ingrediente (nome) values('vino bianco');
-INSERT INTO Ingrediente (nome) values('finocchio');
-INSERT INTO Ingrediente (nome) values('finocchio barbe');
-INSERT INTO Ingrediente (nome) values('noce');
-INSERT INTO Ingrediente (nome) values('noce gherigli');
-INSERT INTO Ingrediente (nome) values('parmiggiano');
-INSERT INTO Ingrediente (nome) values('maggiorana');
-INSERT INTO Ingrediente (nome) values('latte');
-INSERT INTO Ingrediente (nome) values('sale');
-INSERT INTO Ingrediente (nome) values('salmone');
-INSERT INTO Ingrediente (nome) values('salmiocarpio');
-INSERT INTO Ingrediente (nome) values('rapanelli');
-INSERT INTO Ingrediente (nome) values('erba cipollina');
-INSERT INTO Ingrediente (nome) values('panna');
-INSERT INTO Ingrediente (nome) values('aceto');
-INSERT INTO Ingrediente (nome) values('aceto di mela');
-INSERT INTO Ingrediente (nome) values('aceto di vino');
-INSERT INTO Ingrediente (nome) values('aneto');
-INSERT INTO Ingrediente (nome) values('petto di tacchino');
-INSERT INTO Ingrediente (nome) values('tacchino');
-INSERT INTO Ingrediente (nome) values('melanzana');
-INSERT INTO Ingrediente (nome) values('mozzarella');;
-INSERT INTO Ingrediente (nome) values('mozzarella di bufala');
-INSERT INTO Ingrediente (nome) values('funghi');
-INSERT INTO Ingrediente (nome) values('funghi porcini');
-INSERT INTO Ingrediente (nome) values('funghi champignon');
-INSERT INTO Ingrediente (nome) values('crema');
-INSERT INTO Ingrediente (nome) values('olio agliato');
-INSERT INTO Ingrediente (nome) values('olio tartufato');
-INSERT INTO Ingrediente (nome) values('succo di limone');
-INSERT INTO Ingrediente (nome) values('cinghiale');
-INSERT INTO Ingrediente (nome) values('filetto di cinghiale');
-INSERT INTO Ingrediente (nome) values('frutti di bosco');
-INSERT INTO Ingrediente (nome) values('patate');
-INSERT INTO Ingrediente (nome) values('vino rosso');
-INSERT INTO Ingrediente (nome) values('burro');
-INSERT INTO Ingrediente (nome) values('salvia');
-INSERT INTO Ingrediente (nome) values('rosmarino');
-INSERT INTO Ingrediente (nome) values('salsiccia');
-INSERT INTO Ingrediente (nome) values('pomodori');
-INSERT INTO Ingrediente (nome) values('insalta');
-INSERT INTO Ingrediente (nome) values('rucola');
-INSERT INTO Ingrediente (nome) values('baguette');
-INSERT INTO Ingrediente (nome) values('peperoni');
-INSERT INTO Ingrediente (nome) values('pomodori ramati');
-INSERT INTO Ingrediente (nome) values('sale Maldon');
-INSERT INTO Ingrediente (nome) values('olio evo');
-INSERT INTO Ingrediente (nome) values('ginocchia di manzo');
-INSERT INTO Ingrediente (nome) values('ossa di manzo');
-INSERT INTO Ingrediente (nome) values('controfiletto di manzo irlandese');
-INSERT INTO Ingrediente (nome) values('ostriche');
-INSERT INTO Ingrediente (nome) values('limone');
-INSERT INTO Ingrediente (nome) values('menta fresca');
-INSERT INTO Ingrediente (nome) values('mix pepe');
-INSERT INTO Ingrediente (nome) values('pomodoro cuor di bue');
-INSERT INTO Ingrediente (nome) values('cipolla rossa Tropea');
-INSERT INTO Ingrediente (nome) values('fresella integrale');
-INSERT INTO Ingrediente (nome) values('buccia di limone');
-INSERT INTO Ingrediente (nome) values('insalata');
-INSERT INTO Ingrediente (nome) values('polpo');
-INSERT INTO Ingrediente (nome) values('calamari');
-INSERT INTO Ingrediente (nome) values('acciughe');
-INSERT INTO Ingrediente (nome) values('acciughe sottolio');
-INSERT INTO Ingrediente (nome) values('nocciole tostate');
-INSERT INTO Ingrediente (nome) values('zucchero');
-INSERT INTO Ingrediente (nome) values('mandorle tostate');
-INSERT INTO Ingrediente (nome) values('panna fresca');
-INSERT INTO Ingrediente (nome) values('gelatina');
-INSERT INTO Ingrediente (nome) values('cioccolato');
-INSERT INTO Ingrediente (nome) values('cioccolato bianco');
-INSERT INTO Ingrediente (nome) values('pralinato');
-INSERT INTO Ingrediente (nome) values('cioccolato fondente');
-INSERT INTO Ingrediente (nome) values('miele');
-INSERT INTO Ingrediente (nome) values('farina');
-INSERT INTO Ingrediente (nome) values('farina di mandorle');
-INSERT INTO Ingrediente (nome) values('cacao');
-INSERT INTO Ingrediente (nome) values('acqua');
-INSERT INTO Ingrediente (nome) values('pere');
-INSERT INTO Ingrediente (nome) values('grano cotto');
-INSERT INTO Ingrediente (nome) values('latte intero');
-INSERT INTO Ingrediente (nome) values('ricotta vaccina');
-INSERT INTO Ingrediente (nome) values('scorza di limone');
-INSERT INTO Ingrediente (nome) values('vanillina');
-INSERT INTO Ingrediente (nome) values('cannella');
-INSERT INTO Ingrediente (nome) values('savoiardi');
-INSERT INTO Ingrediente (nome) values('gocce di cioccolato');
-INSERT INTO Ingrediente (nome) values('arancia');
-INSERT INTO Ingrediente (nome) values('rhum');
-INSERT INTO Ingrediente (nome) values('estratto di vaniglia');
-INSERT INTO Ingrediente (nome) values('cacao amaro');
-INSERT INTO Ingrediente (nome) values('panna da montare');
-INSERT INTO Ingrediente (nome) values('panna fresca liquida');
-INSERT INTO Ingrediente (nome) values('baccello di vaniglia');
-INSERT INTO Ingrediente (nome) values('zucchero a velo');
-INSERT INTO Ingrediente (nome) values('fiocchi di sale');
-INSERT INTO Ingrediente (nome) values('noci pecan');
-INSERT INTO Ingrediente (nome) values('pistacchi');
-INSERT INTO Ingrediente (nome) values('zucchero semolato');
-INSERT INTO Ingrediente (nome) values('fragole');
-INSERT INTO Ingrediente (nome) values('gelatina alimentare');
-INSERT INTO Ingrediente (nome) values('mango');
-INSERT INTO Ingrediente (nome) values('soia');
-INSERT INTO Ingrediente (nome) values('banana');
-INSERT INTO Ingrediente (nome) values('mela');
-INSERT INTO Ingrediente (nome) values('ananas');
-INSERT INTO Ingrediente (nome) values('tonno');
-INSERT INTO Ingrediente (nome) values('wurstel');
-INSERT INTO Ingrediente (nome) values('zafferano');
-INSERT INTO Ingrediente (nome) values('macinato');
-INSERT INTO Ingrediente (nome) values('svizzera');
-INSERT INTO Ingrediente (nome) values('ketchup');
-INSERT INTO Ingrediente (nome) values('patatine');
-INSERT INTO Ingrediente (nome) values('maionese');
-INSERT INTO Ingrediente (nome) values('senape');
-INSERT INTO Ingrediente (nome) values('salsa tonnata');
-INSERT INTO Ingrediente (nome) values('salsa cocktail');
-INSERT INTO Ingrediente (nome) values('burrata');
-INSERT INTO Ingrediente (nome) values('pistacchio');
-INSERT INTO Ingrediente (nome) values('grogonzola');
-INSERT INTO Ingrediente (nome) values('fontina');
-INSERT INTO Ingrediente (nome) values('prosciutto');
-INSERT INTO Ingrediente (nome) values('origano');
-INSERT INTO Ingrediente (nome) values('salame');
-INSERT INTO Ingrediente (nome) values('salame piccante');
-INSERT INTO Ingrediente (nome) values('carciofi');
-INSERT INTO Ingrediente (nome) values('friarelli');
-INSERT INTO Ingrediente (nome) values('cime di rapa');
-INSERT INTO Ingrediente (nome) values('stracchino');
-INSERT INTO Ingrediente (nome) values('prosciutto crudo');
-INSERT INTO Ingrediente (nome) values('prosciutto cotto');
-INSERT INTO Ingrediente (nome) values('speck');
-INSERT INTO Ingrediente (nome) values('olive');
-INSERT INTO Ingrediente (nome) values('capperi');
-INSERT INTO Ingrediente (nome) values('brie');
-INSERT INTO Ingrediente (nome) values('zucchine');
-INSERT INTO Ingrediente (nome) values('salmone affumicato');
-INSERT INTO Ingrediente (nome) values('nduja');
-INSERT INTO Ingrediente (nome) values('passata');
-INSERT INTO Ingrediente (nome) values('polpa');
+INSERT INTO Ingrediente (nome, allergene) values('guanciale',NULL);
+INSERT INTO Ingrediente (nome, allergene) values('uova','uova e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('pecorino','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('tuorlo','uova e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('albume','uova e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('pepe nero');
+INSERT INTO Ingrediente (nome, allergene) values('cipolla');
+INSERT INTO Ingrediente (nome, allergene) values('peperoncino');
+INSERT INTO Ingrediente (nome, allergene) values('strutto');
+INSERT INTO Ingrediente (nome, allergene) values('pasta','glutine');
+INSERT INTO Ingrediente (nome, allergene) values('pomodoro');
+INSERT INTO Ingrediente (nome, allergene) values('basilico');
+INSERT INTO Ingrediente (nome, allergene) values('trofie','uova e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('pesto');
+INSERT INTO Ingrediente (nome, allergene) values('vongole','molluschi e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('scampi','crostacei e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('prezzemolo');
+INSERT INTO Ingrediente (nome, allergene) values('cozze','molluschi e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('aglio');
+INSERT INTO Ingrediente (nome, allergene) values('bietole');
+INSERT INTO Ingrediente (nome, allergene) values('ricotta','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('vino bianco');
+INSERT INTO Ingrediente (nome, allergene) values('finocchio');
+INSERT INTO Ingrediente (nome, allergene) values('finocchio barbe');
+INSERT INTO Ingrediente (nome, allergene) values('noce','frutta a guscio e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('noce gherigli','frutta a guscio e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('parmigiano','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('maggiorana');
+INSERT INTO Ingrediente (nome, allergene) values('latte','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('sale');
+INSERT INTO Ingrediente (nome, allergene) values('salmone','pesce e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('salmiocarpio','pesce e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('rapanelli');
+INSERT INTO Ingrediente (nome, allergene) values('erba cipollina');
+INSERT INTO Ingrediente (nome, allergene) values('panna','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('aceto');
+INSERT INTO Ingrediente (nome, allergene) values('aceto di mela');
+INSERT INTO Ingrediente (nome, allergene) values('aceto di vino');
+INSERT INTO Ingrediente (nome, allergene) values('aneto');
+INSERT INTO Ingrediente (nome, allergene) values('petto di tacchino');
+INSERT INTO Ingrediente (nome, allergene) values('tacchino');
+INSERT INTO Ingrediente (nome, allergene) values('melanzana');
+INSERT INTO Ingrediente (nome, allergene) values('mozzarella','latte e derivati');;
+INSERT INTO Ingrediente (nome, allergene) values('mozzarella di bufala','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('funghi');
+INSERT INTO Ingrediente (nome, allergene) values('funghi porcini');
+INSERT INTO Ingrediente (nome, allergene) values('funghi champignon');
+INSERT INTO Ingrediente (nome, allergene) values('crema','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('olio agliato');
+INSERT INTO Ingrediente (nome, allergene) values('olio tartufato');
+INSERT INTO Ingrediente (nome, allergene) values('succo di limone');
+INSERT INTO Ingrediente (nome, allergene) values('cinghiale');
+INSERT INTO Ingrediente (nome, allergene) values('filetto di cinghiale');
+INSERT INTO Ingrediente (nome, allergene) values('frutti di bosco');
+INSERT INTO Ingrediente (nome, allergene) values('patate');
+INSERT INTO Ingrediente (nome, allergene) values('vino rosso');
+INSERT INTO Ingrediente (nome, allergene) values('burro','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('salvia');
+INSERT INTO Ingrediente (nome, allergene) values('rosmarino');
+INSERT INTO Ingrediente (nome, allergene) values('salsiccia');
+INSERT INTO Ingrediente (nome, allergene) values('pomodori');
+INSERT INTO Ingrediente (nome, allergene) values('insalata');
+INSERT INTO Ingrediente (nome, allergene) values('rucola');
+INSERT INTO Ingrediente (nome, allergene) values('baguette','glutine');
+INSERT INTO Ingrediente (nome, allergene) values('peperoni');
+INSERT INTO Ingrediente (nome, allergene) values('pomodori ramati');
+INSERT INTO Ingrediente (nome, allergene) values('sale Maldon');
+INSERT INTO Ingrediente (nome, allergene) values('olio evo');
+INSERT INTO Ingrediente (nome, allergene) values('ginocchia di manzo');
+INSERT INTO Ingrediente (nome, allergene) values('ossa di manzo');
+INSERT INTO Ingrediente (nome, allergene) values('controfiletto di manzo irlandese');
+INSERT INTO Ingrediente (nome, allergene) values('ostriche','molluschi e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('limone');
+INSERT INTO Ingrediente (nome, allergene) values('menta fresca');
+INSERT INTO Ingrediente (nome, allergene) values('mix pepe');
+INSERT INTO Ingrediente (nome, allergene) values('pomodoro cuor di bue');
+INSERT INTO Ingrediente (nome, allergene) values('cipolla rossa Tropea');
+INSERT INTO Ingrediente (nome, allergene) values('fresella integrale');
+INSERT INTO Ingrediente (nome, allergene) values('buccia di limone');
+INSERT INTO Ingrediente (nome, allergene) values('insalata');
+INSERT INTO Ingrediente (nome, allergene) values('polpo');
+INSERT INTO Ingrediente (nome, allergene) values('calamari');
+INSERT INTO Ingrediente (nome, allergene) values('acciughe');
+INSERT INTO Ingrediente (nome, allergene) values('acciughe sottolio','anidride solforosa e solfiti');
+INSERT INTO Ingrediente (nome, allergene) values('nocciole tostate');
+INSERT INTO Ingrediente (nome, allergene) values('zucchero');
+INSERT INTO Ingrediente (nome, allergene) values('mandorle tostate','frutta a guscio e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('panna fresca','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('gelatina');
+INSERT INTO Ingrediente (nome, allergene) values('cioccolato');
+INSERT INTO Ingrediente (nome, allergene) values('cioccolato bianco','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('pralinato');
+INSERT INTO Ingrediente (nome, allergene) values('cioccolato fondente');
+INSERT INTO Ingrediente (nome, allergene) values('miele');
+INSERT INTO Ingrediente (nome, allergene) values('farina','glutine');
+INSERT INTO Ingrediente (nome, allergene) values('farina di mandorle','frutta a guscio e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('cacao');
+INSERT INTO Ingrediente (nome, allergene) values('acqua');
+INSERT INTO Ingrediente (nome, allergene) values('pere');
+INSERT INTO Ingrediente (nome, allergene) values('grano cotto','glutine');
+INSERT INTO Ingrediente (nome, allergene) values('latte intero','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('ricotta vaccina','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('scorza di limone');
+INSERT INTO Ingrediente (nome, allergene) values('vanillina');
+INSERT INTO Ingrediente (nome, allergene) values('cannella');
+INSERT INTO Ingrediente (nome, allergene) values('savoiardi','uova e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('gocce di cioccolato');
+INSERT INTO Ingrediente (nome, allergene) values('arancia');
+INSERT INTO Ingrediente (nome, allergene) values('rhum');
+INSERT INTO Ingrediente (nome, allergene) values('estratto di vaniglia');
+INSERT INTO Ingrediente (nome, allergene) values('cacao amaro');
+INSERT INTO Ingrediente (nome, allergene) values('panna da montare','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('panna fresca liquida','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('baccello di vaniglia');
+INSERT INTO Ingrediente (nome, allergene) values('zucchero a velo');
+INSERT INTO Ingrediente (nome, allergene) values('fiocchi di sale');
+INSERT INTO Ingrediente (nome, allergene) values('noci pecan','frutta a guscio e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('pistacchi','frutta a guscio e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('zucchero semolato');
+INSERT INTO Ingrediente (nome, allergene) values('fragole');
+INSERT INTO Ingrediente (nome, allergene) values('gelatina alimentare');
+INSERT INTO Ingrediente (nome, allergene) values('mango');
+INSERT INTO Ingrediente (nome, allergene) values('soia');
+INSERT INTO Ingrediente (nome, allergene) values('banana');
+INSERT INTO Ingrediente (nome, allergene) values('mela');
+INSERT INTO Ingrediente (nome, allergene) values('ananas');
+INSERT INTO Ingrediente (nome, allergene) values('tonno','pesce e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('wurstel');
+INSERT INTO Ingrediente (nome, allergene) values('zafferano');
+INSERT INTO Ingrediente (nome, allergene) values('macinato');
+INSERT INTO Ingrediente (nome, allergene) values('svizzera');
+INSERT INTO Ingrediente (nome, allergene) values('ketchup');
+INSERT INTO Ingrediente (nome, allergene) values('patatine');
+INSERT INTO Ingrediente (nome, allergene) values('maionese');
+INSERT INTO Ingrediente (nome, allergene) values('senape','senape e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('salsa tonnata','uova e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('salsa cocktail','uova e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('burrata','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('pistacchio');
+INSERT INTO Ingrediente (nome, allergene) values('gorgonzola','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('fontina','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('prosciutto');
+INSERT INTO Ingrediente (nome, allergene) values('origano');
+INSERT INTO Ingrediente (nome, allergene) values('salame');
+INSERT INTO Ingrediente (nome, allergene) values('salame piccante');
+INSERT INTO Ingrediente (nome, allergene) values('carciofi');
+INSERT INTO Ingrediente (nome, allergene) values('friarelli');
+INSERT INTO Ingrediente (nome, allergene) values('cime di rapa');
+INSERT INTO Ingrediente (nome, allergene) values('stracchino','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('prosciutto crudo');
+INSERT INTO Ingrediente (nome, allergene) values('prosciutto cotto');
+INSERT INTO Ingrediente (nome, allergene) values('speck');
+INSERT INTO Ingrediente (nome, allergene) values('olive');
+INSERT INTO Ingrediente (nome, allergene) values('capperi');
+INSERT INTO Ingrediente (nome, allergene) values('brie','latte e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('zucchine');
+INSERT INTO Ingrediente (nome, allergene) values('salmone affumicato','pesce e derivati');
+INSERT INTO Ingrediente (nome, allergene) values('nduja');
+INSERT INTO Ingrediente (nome, allergene) values('passata');
+INSERT INTO Ingrediente (nome, allergene) values('polpa');
 
 
 
