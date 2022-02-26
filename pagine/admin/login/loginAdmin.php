@@ -34,7 +34,5 @@
                 $_SESSION['errorea'] = 1;
                 header("Location: formAdmin.php");
             }
-        
-        session_destroy();
 
     ?>
