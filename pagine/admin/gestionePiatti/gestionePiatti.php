@@ -76,118 +76,192 @@ session_start();
                     </div>
                </div>
           </div>
-          <br> 
+          <br>
           <br>
           <div class="row"></div>
           <form class="row g-3">
                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Nome piatto</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label class="form-label">Nome piatto</label>
+                    <input type="text" class="form-control" name="nome" id="nome">
                </div>
                <div class="col-md-6">
                     <label for="inputPassword4" class="form-label">Immagine del piatto</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="url">
+                    <input type="text" class="form-control" name="urlImg" id="urlImg" placeholder="url">
                </div>
                <br>
                <br>
                <br>
                <br>
                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Descrizione</label>
-                    <textarea class="form-control" placeholder="Scrivi qui." name="recensione" id="recensione"></textarea>
+                    <label class="form-label">Descrizione</label>
+                    <textarea class="form-control" placeholder="Scrivi qui." name="descrizione" id="descrizione"></textarea>
+                    <br>
+                    <br>
+
                </div>
-               
-               <div class="container">
-                    <br>
-                    <br>
 
-                    <div class="row">
-                         <div class="col-12">
-                              <div style="border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
-                                   <h4>Ingredienti</h4>
-                                   <?php
-                                        $host = "127.0.0.1";
-                                        $user = "root";
-                                        $password = "";
-                                        $database = "getnbite";
+               <div class="row">
+                    <div class="col-2">
+                         <label class="form-label">Prezzo</label>
+                         <input type="number" class="form-control" placeholder="€" name="prezzo" id="prezzo"></input>
+                         <br>
+                         <br>
+                    </div>
+                    <div class="col-7">
+                         <div class="container">
+                              <div class="row">
+                                   <div class="col-12">
+                                        <h4>Sezione</h4>
+                                   </div>
 
-                                        $connessione = new mysqli($host, $user, $password, $database);
-
-                                        if ($connessione === false) {
-                                             die("Errore di connessione: " . $connessione->connect_error);
-                                        }
-
-                                        $sql = "SELECT nome FROM ingrediente";
-
-                                        if ($result = $connessione->query($sql)) {
-                                             while ($row = $result->fetch_array()) {
-                                                  echo '
-                                                  <div class="form-check">
-                                                       <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                       <label class="form-check-label" for="flexCheckChecked">
-                                                            '.$row['nome'].'
-                                                       </label>
-                                                  </div>
-                                                  ';
-                                             }
-                                        } else {
-                                             echo "Non ci ingredienti";
-                                        }
-                                   ?>
- 
+                              </div>
+                              <div class="row">
+                                   <div class="col-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Default checked radio
+                                             </label>
+                                        </div>
+                                   </div>
+                                   <div class="col-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Default checked radio
+                                             </label>
+                                        </div>
+                                   </div> 
+                                   <div class="col-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Default checked radio
+                                             </label>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="row">
+                                   <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                             Default checked radio
+                                        </label>
+                                   </div>
+                              </div><div class="row">
+                                   <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                             Default checked radio
+                                        </label>
+                                   </div>
                               </div>
                          </div>
                     </div>
+                    <div class="col-3">
+                         <form action="../tabellaPiatti/tabellaPiatti.php">
+                              <input type="submit" style="background-color: #00E1A5; color: white; display: inline-block; cursor: pointer; text-align: center; text-decoration: none; outline: none; border: none;  border-radius: 30px; height: 50px" value="Visualizza i tuoi piatti">
+                         </form>
+                    </div>
                </div>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
+
+
+
+               <div style="border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
+                    <div class="container">
+
+                         <div class="row">
+                              <div class="col-12">
+                                   <h4>Ingredienti</h4>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <?php
+                              $host = "127.0.0.1";
+                              $user = "root";
+                              $password = "";
+                              $database = "getnbite";
+
+                              $connessione = new mysqli($host, $user, $password, $database);
+
+                              if ($connessione === false) {
+                                   die("Errore di connessione: " . $connessione->connect_error);
+                              }
+
+                              $sql = "SELECT nome FROM ingrediente";
+
+                              if ($result = $connessione->query($sql)) {
+                                   while ($row = $result->fetch_array()) {
+                                        echo '
+                                             <div class="col-4">
+                                             <div class="form-check">
+                                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                             <label class="form-check-label" for="flexCheckChecked">
+                                                  ' . $row['nome'] . '
+                                             </label>
+                                        </div>
+                                             </div>
+                                             
+                                        ';
+                                   }
+                              } else {
+                                   echo "Non ci sono ingredienti";
+                              }
+                              ?>
+                         </div>
+
+
+
+                    </div>
+               </div>
+
+
+
+
+
                <div class="col-12">
+                    <br>
+                    <br>
                     <button type="submit" class="btn btn-primary">Carica</button>
                </div>
           </form>
      </div>
      </div>
-	<br>
-	<br>
-	<center>
-	<form action="../tabellaPiatti/tabellaPiatti.php">
-		<input type="submit" style="background-color: #00E1A5; color: white; display: inline-block; cursor: pointer; text-align: center; text-decoration: none; outline: none; border: none;  border-radius: 30px; height: 50px" value="Visualizza i tuoi piatti">
-	</form>
-	</center>
-				
-	   <br>
-	   <div class="footer-clean">
-		  <footer>
-			 <div class="container">
-				<div class="row justify-content-center">
-				    <div class="col-4 ">
-					   <a class="navbar-brand" href="./">
-						  <img src="../../../img/home/logoScritta.png" alt=""  height="60" class="d-inline-block align-text-top">
-					   </a>
-				    </div>
-				    <div class="col-4" ></div>
-					   <center>
-						  <p style="text-decoration: none; color:black">Partita Iva: 02070920992</p>
-						  <p>GetnBite ©</p> 
-					   </center>
-				    </div>
-				</div>
-			 </div>
-		  </footer>
-	</div>
-		  
-		  
-		  
-		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		  <script src="../../../js/bootstrap.min.js"></script>
-	   </body>
-	   </html>
-	   <?php
-		  
-	   ?>
+     <br>
+     <br>
+     <center>
+
+     </center>
+
+     <br>
+     <div class="footer-clean">
+          <footer>
+               <div class="container">
+                    <div class="row justify-content-center">
+                         <div class="col-4 ">
+                              <a class="navbar-brand" href="./">
+                                   <img src="../../../img/home/logoScritta.png" alt="" height="60" class="d-inline-block align-text-top">
+                              </a>
+                         </div>
+                         <div class="col-4"></div>
+                         <center>
+                              <p style="text-decoration: none; color:black">Partita Iva: 02070920992</p>
+                              <p>GetnBite ©</p>
+                         </center>
+                    </div>
+               </div>
+     </div>
+     </footer>
+     </div>
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="../../../js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<?php
+
+?>

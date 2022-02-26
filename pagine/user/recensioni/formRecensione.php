@@ -164,23 +164,27 @@
 			</div>
 		</div>
 	</div>
-	<footer class=" bg-white text-dark">
-		<div class="container py-16 px-1">
-			<div class="row py-4">
-				<div class="col-md-4" style="align-content: flex-start;">
-					<img src="../../../img/Home/logoScritta.jpg" width="400" class="mb-3">
-				</div>
-				<div class="col-md-4 center-text" style="position: relative; left: 700px;">
-					<p style="text-align: center;">Login</p>
-					<p style="text-align: center;">Copyright 2022 GetnBite.com</p>
-					<p style="text-align: center;">Partita IVA 02070920992</p>
-				</div>
-				<div class="col-md-4 ">
+	
+	<div class="footer-clean">
+		<footer>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-4 ">
+						<a class="navbar-brand" href="./">
+							<img src="../../../img/home/logoScritta.png" alt=""  height="60" class="d-inline-block align-text-top">
+						</a>
+					</div>
+					<div class="col-4" ></div>
+							<center>
+								<p style="text-decoration: none; color:black">Partita Iva: 02070920992</p>
+								<p>GetnBite ©</p> 
+							</center>
+					</div>
 				</div>
 			</div>
-		</div>
-		</div>
-	</footer>
+		</footer>
+	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="../../../js/bootstrap.min.js"></script>
 </body>
