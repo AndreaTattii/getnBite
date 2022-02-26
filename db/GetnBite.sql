@@ -166,7 +166,7 @@ INSERT INTO Ristoratore (utente, pass) VALUES
 
 /*riempimento tabella ingredienti*/
 INSERT INTO Ingrediente (nome, allergene) values('spahetti','glutine');
-INSERT INTO Ingrediente (nome, allergene) values('guanciale',NULL);
+INSERT INTO Ingrediente (nome, allergene) values('guanciale');
 INSERT INTO Ingrediente (nome, allergene) values('uova','uova e derivati');
 INSERT INTO Ingrediente (nome, allergene) values('pecorino','latte e derivati');
 INSERT INTO Ingrediente (nome, allergene) values('tuorlo','uova e derivati');
