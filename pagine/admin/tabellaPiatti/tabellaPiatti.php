@@ -98,16 +98,16 @@
                         if($result->num_rows > 0){
                             echo'
                             <center>
-                            <table style="border: 3px solid; border-color: #00E1A5;" >
+                            <table style="border: 3px solid; border-color: #00E1A5; width: 60%" >
                                 <tr style="border: 3px solid; border-color: #black;">
-                                    <th style="border: 3px solid; border-color: black;">Id</th>
-                                    <th style="border: 3px solid; border-color: black;">Nome</th>
+                                    <th style="border: 3px solid; border-color: black; text-align: center;">Id</th>
+                                    <th style="border: 3px solid; border-color: black; text-align: center;">Nome</th>
                                 </tr>';
                             while($row=$result->fetch_array()){
                                 echo '
                                 <tr style="border: 3px solid; border-color: #00E1A5;">
-                                    <td style="border: 3px solid; border-color: #00E1A5;">' . $row['id'] . ' </td>
-                                    <td style="border: 3px solid; border-color: #00E1A5;">' . $row['nome'] . ' </td>
+                                    <td style="border: 3px solid; border-color: #00E1A5; text-align: center;">' . $row['id'] . ' </td>
+                                    <td style="border: 3px solid; border-color: #00E1A5; text-align: center;">' . $row['nome'] . ' </td>
                                 </tr>
                                 ';
                             }
