@@ -81,12 +81,12 @@ session_start();
           <div class="row"></div>
           <form class="row g-3">
                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Nome piatto</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label  class="form-label">Nome piatto</label>
+                    <input type="text" class="form-control" name="piatto" id="piatto">
                </div>
                <div class="col-md-6">
                     <label for="inputPassword4" class="form-label">Immagine del piatto</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="url">
+                    <input type="password" class="form-control" name="urlImg" id="urlImg" placeholder="url">
                </div>
                <br>
                <br>

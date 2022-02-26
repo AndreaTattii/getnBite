@@ -320,7 +320,7 @@ INSERT INTO Ingrediente (nome) values('mango');
 INSERT INTO Ingrediente (nome) values('soia');
 INSERT INTO Ingrediente (nome) values('banana');
 INSERT INTO Ingrediente (nome) values('mela');
-INSERT INTO Ingrediente (nome) values('anas');
+INSERT INTO Ingrediente (nome) values('ananas');
 INSERT INTO Ingrediente (nome) values('tonno');
 INSERT INTO Ingrediente (nome) values('wurstel');
 INSERT INTO Ingrediente (nome) values('zafferano');
