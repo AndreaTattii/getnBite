@@ -39,7 +39,7 @@
             echo 'ultimo id di portata: '.$ultimo_id.'.<br>';
             echo 'ingrediente da inserire: '.$nomeIngrediente.'<br>';
 
-            $sqlIdIngrediente = "SELECT * FROM ingrediente WHERE nome = '.$nomeIngrediente.'";
+            $sqlIdIngrediente = "SELECT id FROM ingrediente WHERE nome = '.$nomeIngrediente.'";
 
             if($result = $connessione->query($sqlIdIngrediente)){
                 $row = $result->fetch_assoc();
