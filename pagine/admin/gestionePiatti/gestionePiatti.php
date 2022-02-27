@@ -248,7 +248,6 @@ session_start();
                               }
                               echo '
                                    <input type="hidden" value="' . $contatore . '" name="contatore">
-
                               ';
                               ?>
                          </div>
