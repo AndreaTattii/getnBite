@@ -148,7 +148,7 @@
                                 ';
                                 while($row=$result->fetch_array()){
                                 echo '<div class="row justify-content-center g-5" >';
-                                for($i=0;$i<3;$i++){ //poi sistemo, c'è un errore stupido
+                                for($i=0;$i<3;$i++){ //non capisco come fare mi sento scemo
                                 
                                 
                                     echo '
@@ -176,10 +176,6 @@
                     }else{
                         echo "Impossibile eseguire la query";
                     }
-
-
-
-
 
 
                 ?>
