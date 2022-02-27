@@ -25,7 +25,7 @@
 		  
 			 <nav class="navbar  navbar-expand-lg navbar-light bg-light">
 				<div class="container p-2">
-				    <a class="navbar-brand" href="./">
+				    <a class="navbar-brand" href="../home/homeRistoratore.php">
 					   <img src="../../../img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
 				    </a>
 				    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
@@ -113,7 +113,7 @@
                             }
                             echo "</table></center>";
                         }else{
-                            echo "Non ci sono più righe nella query";
+                            echo "Non ci sono piatti nel database";
                         }
                     }else{
                         echo "Impossibile eseguire la query";

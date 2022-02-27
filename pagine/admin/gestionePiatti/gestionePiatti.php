@@ -78,8 +78,7 @@ session_start();
           </div>
           <br>
           <br>
-          <div class="row"></div>
-          <form class="row g-3">
+          <form class="row g-3" action="backend/inserimentoPiatto.php" method="POST">
                <div class="col-md-6">
                     <label class="form-label">Nome piatto</label>
                     <input type="text" class="form-control" name="nome" id="nome">
@@ -100,74 +99,111 @@ session_start();
 
                </div>
 
-               <div class="row">
-                    <div class="col-2">
+               <div class="row justify-content-center" style="margin: 10px;">
+                    <div class="col-sm-2">
                          <label class="form-label">Prezzo</label>
                          <input type="number" class="form-control" placeholder="€" name="prezzo" id="prezzo"></input>
                          <br>
                          <br>
                     </div>
                     <div class="col-7">
-                         <div class="container">
-                              <div class="row">
-                                   <div class="col-12">
+                         <div class="container" style="margin: 10px; border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
+                              <div class="row justify-content-center">
+                                   <div class="col-sm-12">
                                         <h4>Sezione</h4>
                                    </div>
 
                               </div>
                               <div class="row">
-                                   <div class="col-4">
+                                   <div class="col-sm-4">
                                         <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="antipasti" checked>
                                              <label class="form-check-label" for="flexRadioDefault2">
-                                                  Default checked radio
+                                                  Antipasti
                                              </label>
                                         </div>
                                    </div>
-                                   <div class="col-4">
+                                   <div class="col-sm-4">
                                         <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="primi" checked>
                                              <label class="form-check-label" for="flexRadioDefault2">
-                                                  Default checked radio
+                                                  Primi
                                              </label>
                                         </div>
-                                   </div> 
-                                   <div class="col-4">
+                                   </div>
+                                   <div class="col-sm-4">
                                         <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="secondi" checked>
                                              <label class="form-check-label" for="flexRadioDefault2">
-                                                  Default checked radio
+                                                  Secondi
                                              </label>
                                         </div>
                                    </div>
                               </div>
                               <div class="row">
-                                   <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                             Default checked radio
-                                        </label>
+                                   <div class="col-sm-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="pizze" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Pizze
+                                             </label>
+                                        </div>
                                    </div>
-                              </div><div class="row">
-                                   <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                             Default checked radio
-                                        </label>
+                                   <div class="col-sm-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="contorni" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Contorni
+                                             </label>
+                                        </div>
+                                   </div>
+                                   <div class="col-sm-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="dolci" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Dolci
+                                             </label>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="row">
+                                   <div class="col-sm-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="amari" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Amari
+                                             </label>
+                                        </div>
+                                   </div>
+                                   <div class="col-sm-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="caffe" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Caffè
+                                             </label>
+                                        </div>
+                                   </div>
+                                   <div class="col-sm-4">
+                                        <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="bibite" checked>
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                                  Bibite
+                                             </label>
+                                        </div>
                                    </div>
                               </div>
                          </div>
                     </div>
-                    <div class="col-3">
-                         <form action="../tabellaPiatti/tabellaPiatti.php">
-                              <input type="submit" style="background-color: #00E1A5; color: white; display: inline-block; cursor: pointer; text-align: center; text-decoration: none; outline: none; border: none;  border-radius: 30px; height: 50px" value="Visualizza i tuoi piatti">
-                         </form>
+                    <div class="col-sm-3">
+                         <a href="../tabellaPiatti/tabellaPiatti.php"><input type="botton" style="background-color: #00E1A5; color: white; display: inline-block; cursor: pointer; text-align: center; text-decoration: none; outline: none; border: none;  border-radius: 30px; height: 50px" value="Visualizza i tuoi piatti"></a>
                     </div>
                </div>
 
 
 
-               <div style="border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
+
+               <div style="margin: 10px; border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
                     <div class="container">
 
                          <div class="row">
@@ -191,26 +227,30 @@ session_start();
 
                               $sql = "SELECT nome FROM ingrediente";
 
+                              $contatore = 0;
                               if ($result = $connessione->query($sql)) {
                                    while ($row = $result->fetch_array()) {
                                         echo '
-                                             <div class="col-4">
-                                             <div class="form-check">
-                                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                                             <label class="form-check-label" for="flexCheckChecked">
-                                                  ' . $row['nome'] . '
-                                             </label>
-                                        </div>
+                                             <div class="col-sm-4">
+                                                  <div class="form-check">
+                                                       <input class="form-check-input" name="' . $contatore . '"  type="checkbox" value="' . $row['nome'] . '" id="flexCheckChecked" >
+                                                       <label class="form-check-label" for="flexCheckChecked">
+                                                            ' . $row['nome'] . '
+                                                       </label>
+                                                  </div>
                                              </div>
                                              
                                         ';
+                                        $contatore++;
                                    }
                               } else {
                                    echo "Non ci sono ingredienti";
                               }
+                              echo '
+                                   <input type="hidden" value="' . $contatore . '" name="contatore">
+                              ';
                               ?>
                          </div>
-
 
 
                     </div>
@@ -227,12 +267,46 @@ session_start();
                </div>
           </form>
      </div>
-     </div>
-     <br>
-     <br>
-     <center>
 
-     </center>
+
+
+     <div class="container">
+          <br>
+          <div class="row justify-content-center">
+               <div class="col-sm-4">
+                    <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px; text-align: center;">
+                         <container>
+                              <div class="row justify-content-center ">
+                                   <div class="col sm-6">
+                                        <h2>Rimuovi piatti<h2>
+                                   </div>
+                              </div>
+                         </container>
+                    </div>
+               </div>
+          </div>
+
+          <div class="row justify-content-center">
+               <form action="backend/eliminazionePiatto.php" method="POST">
+                    <div class="container">
+                         <div class="row justify-content-start">
+                              <div class="col-sm-6">
+                                   <br>
+                                   <input type="text" class="form-control" placeholder="Nome del piatto" name="nomePiatto" id="nomePiatto"></input>
+                              </div>
+                              <div class="col-sm-6">
+                                   <br>
+                                   <button type="submit" class="btn btn-primary" style="background-color: #00E1A5; border-color:#00E1A5;">Rimuovi</button>
+                              </div>
+                         </div>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <br>
+     <br>
+
 
      <br>
      <div class="footer-clean">
