@@ -16,18 +16,39 @@
     $urlImg = $connessione->real_escape_string($_REQUEST['urlImg']);
     $descrizione = $connessione->real_escape_string($_REQUEST['descrizione']);
     $prezzo = $connessione->real_escape_string($_REQUEST['prezzo']);
+    $sezionePiatto = $_POST['sezione'];
     
-    
+    $sqlPietanza = "INSERT INTO pietanza (nome, descrizione, url_img, prezzo, tipo) VALUES 
+    ('$nome','$descrizione', '$urlImg', '$prezzo', '$sezionePiatto')";
 
-    $sql = "INSERT INTO utente (nome, descrizione, url_img, prezzo, tipo) VALUES 
-    ('$nome','$cognome', '$mail', '$password')";
-
-    if($connessione->query($sql) === true){
-        $_SESSION['email']= $mail;
-        header("location: ../../../../");
-        echo "Utente inserito con successo";
+    if($connessione->query($sqlPietanza) === true){
+        
+        //header("location: ../../../../");
+        echo "Piatto inserito con successo";
     }else{
         echo "Errore durante inserimento: ".$connessione->error;
+    }
+
+    $contatore = $_POST['contatore'];
+
+    for($i = 0 ; $i < $contatore ; $i++){
+        if(isset($_POST["$i"])){
+
+            $ultimo_id = $connessione->insert_id;
+            
+            echo $ultimo_id['id'];
+            echo $_POST["$i"];
+            $sqlIngrediente = "INSERT INTO pietanzacontieneingrediente (idPietanza, idIngrediente) VALUES 
+            ('$ultimo_id', ' ".$_POST[strval($i)]." ')";
+
+            if($connessione->query($sqlIngrediente) === true){
+
+                echo "Ingrediente inserito con successo";
+            }else{
+                echo "Errore durante inserimento: ".$connessione->error;
+            }
+        }
+
     }
 
     $connessione->close();
