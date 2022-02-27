@@ -39,19 +39,8 @@
             echo 'ultimo id di portata: '.$ultimo_id.'.<br>';
             echo 'ingrediente da inserire: '.$nomeIngrediente.'<br>';
 
-            $sqlIdIngrediente = "SELECT id FROM ingrediente WHERE nome = '.$nomeIngrediente.'";
-
-            if($result = $connessione->query($sqlIdIngrediente)){
-                $row = $result->fetch_assoc();
-                $idIngrediente = $row['id'];
-            }else{
-                echo "Errore durante ricerca ingrediente: ".$connessione->error."<br>";
-            }
-
-            echo 'id dello ingrediente da inserire: '.$idIngrediente.'<br>';
-
-            $sqlIngrediente = "INSERT INTO pietanzacontieneingrediente (idPietanza, idIngrediente) VALUES 
-            ('$ultimo_id', ' $idIngrediente')";
+            $sqlIngrediente = "INSERT INTO pietanzacontieneingrediente (idPietanza, nomeIngrediente) VALUES 
+            ('$ultimo_id', ' $nomeIngrediente')";
 
             if($connessione->query($sqlIngrediente) === true){
 

@@ -104,8 +104,7 @@ CREATE TABLE Pietanza(
 );
 
 CREATE TABLE Ingrediente(
-	id int PRIMARY KEY AUTO_INCREMENT,
-	nome varchar(255) NOT NULL UNIQUE,
+	nome varchar(255) PRIMARY KEY,
 	allergene varchar(255)
 );
 
@@ -135,10 +134,10 @@ CREATE TABLE CarrelloContienePietanza(
 
 CREATE TABLE PietanzaContieneIngrediente(
 	idPietanza int,
-	idIngrediente int,
-	PRIMARY KEY (idPietanza, idIngrediente),
+	nomeIngrediente varchar(255),
+	PRIMARY KEY (idPietanza, nomeIngrediente),
 	FOREIGN KEY (idPietanza) REFERENCES Pietanza(id),
-	FOREIGN KEY (idIngrediente) REFERENCES Ingrediente(id)
+	FOREIGN KEY (nomeIngrediente) REFERENCES Ingrediente(nome)
 );
 
 CREATE TABLE Ristoratore(
