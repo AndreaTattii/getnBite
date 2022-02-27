@@ -99,7 +99,7 @@
     
     
     
-    <div class="container g-15">
+    <!-- <div class="container g-15">
         <div class="row ">
 			<div class="col-sm">
                 <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
@@ -110,7 +110,7 @@
 			</div>
 		</div>
 
-        <br>
+        <br> -->
 
 
         <?php
@@ -131,21 +131,44 @@
                     $sql= "SELECT url_img, nome FROM pietanza";
                     if($result = $connessione->query($sql)){
                         if($result->num_rows > 0){
-                            while($row=$result->fetch_array()){
-                                echo '
-                                <div class="row justify-content-center g-5" >
-                                <div class="col-sm align-self-center">
-                                <a href="dinamico/antipasti/antipasti.php"><div class="card text-center align-self-center" style="width:350px">
-                                <img class="card-img-top" src="'.$row['url_img'].'" alt="Card image" style="width:100%">
-                                <div class="card-body">
-                        
-                                <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/antipasti/antipasti.php"><b>'.$row['nome'].'</b></a></p>
-                        
+                            echo'
+                            <div class="container g-15">
+                                <div class="row ">
+                                    <div class="col-sm">
+                                        <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                                            <center>
+                                                <h2>Antipasti<h2>
+                                            </center>
+                                        </div>
+                                    </div>
                                 </div>
-                                </div></a>
-                                </div>
+                    
+                                <br>
+                    
                                 ';
-                            }
+                                while($row=$result->fetch_array()){
+                                echo '<div class="row justify-content-center g-5" >';
+                                for($i=0;$i<3;$i++){ //poi sistemo, c'è un errore stupido
+                                
+                                
+                                    echo '
+
+                                
+                                    <div class="col-sm align-self-center">
+                                        <a href="dinamico/antipasti/antipasti.php"><div class="card text-center align-self-center" style="width:350px">
+                                            <img class="card-img-top" src="'.$row['url_img'].'" alt="Card image" style="width:100%">
+                                            <div class="card-body">
+                                                
+                                                    <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/antipasti/antipasti.php"><b>'.$row['nome'].'</b></a></p>
+                                                
+                                            </div>
+                                        </div></a>
+                                    </div>
+
+                                    ';
+                                }
+                                echo '</div>';
+                                }
                            echo '</div>';
                         }else{
                             echo "Non ci sono piatti salvati nel database";
