@@ -96,7 +96,7 @@
 		}
 	?>
   	
-	<div  style="background-image: url('img/Home/img1.png'); height: 600px">
+	<div  style="background-image: url('img/Home/img1.png'); height: 600px; background-repeat: no-repeat; width:100%; background-position: center;">
 		
         <center>
             <br>

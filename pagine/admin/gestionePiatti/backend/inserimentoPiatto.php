@@ -39,8 +39,8 @@
             echo 'ultimo id di portata: '.$ultimo_id.'.<br>';
             echo 'ingrediente da inserire: '.$nomeIngrediente.'<br>';
 
-            $sqlIngrediente = "INSERT INTO pietanzacontieneingrediente (idPietanza, nomeIngrediente) VALUES 
-            ('$ultimo_id', ' $nomeIngrediente')";
+            $sqlIngrediente = 'INSERT INTO pietanzacontieneingrediente (idPietanza, nomeIngrediente) VALUES 
+            ('.$ultimo_id.', "'.$nomeIngrediente.'" )';
 
             if($connessione->query($sqlIngrediente) === true){
 
