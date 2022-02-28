@@ -20,7 +20,7 @@
     $row = $result->fetch_array();
     echo $row["id"];
 
-    $sql = "INSERT INTO carrellocontienepietanze VALUES ( ,'$row["id"]')";
+    $sql = "INSERT INTO carrellocontienepietanze VALUES ( ".$row['id'].")";
     $result = $connessione->query($sql);
 
     
