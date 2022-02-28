@@ -209,6 +209,8 @@
 					<div class="col-4" ></div>
 						<center>
 							<a href="pagine/admin/login/formAdmin.php" style="text-decoration: none; color:black">Login Admin</a>
+							<br>
+							<br>
 							<p style="text-decoration: none; color:black">Partita Iva: 02070920992</p>
 							<p>GetnBite ©</p> 
 						</center>
