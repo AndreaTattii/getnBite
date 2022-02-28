@@ -91,7 +91,9 @@ CREATE TABLE Evento(
 );
 
 CREATE TABLE Carrello(
-	id int PRIMARY KEY AUTO_INCREMENT
+	id int PRIMARY KEY AUTO_INCREMENT,
+	id_Utente int,
+	FOREIGN KEY(id_Utente) REFERENCES Utente(id)
 );
 
 CREATE TABLE Pietanza(

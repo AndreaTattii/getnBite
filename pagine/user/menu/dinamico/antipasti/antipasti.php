@@ -148,18 +148,18 @@
                                 ';
                                 for($i=0;$i<3;$i++){
                                     echo '<div class="row justify-content-center g-5" >';
-                                    while($row=$result->fetch_array()){ //non capisco come fare mi sento scemo
+                                    while($row=$result->fetch_array()){ 
                                     
                                         
                                         echo '
 
                                     
                                         <div class="col-sm align-self-center">
-                                            <a href="dinamico/antipasti/antipasti.php">
+                                            <a href="../../queryCarrello.php">
                                                 <div class="card text-center align-self-center" style="width:350px">
                                                     <img class="card-img-top" src="'.$row['url_img'].'" alt="Card image" style="width:100%">
                                                     <div class="card-body">
-                                                        <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/antipasti/antipasti.php"><b>'.$row['nome'].'</b></a></p>
+                                                        <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="../../queryCarrello.php"><b>'.$row['nome'].'</b></a></p>
                                                     </div>
                                                 </div>
                                             </a>
