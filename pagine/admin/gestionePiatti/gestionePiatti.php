@@ -26,7 +26,7 @@ session_start();
 
      <nav class="navbar  navbar-expand-lg navbar-light bg-light">
           <div class="container p-2">
-               <a class="navbar-brand" href="./">
+               <a class="navbar-brand" href="../../index.php">
                     <img src="../../../img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
                </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -314,7 +314,7 @@ session_start();
                <div class="container">
                     <div class="row justify-content-center">
                          <div class="col-4 ">
-                              <a class="navbar-brand" href="./">
+                              <a class="navbar-brand" href="../../../index.php">
                                    <img src="../../../img/home/logoScritta.png" alt="" height="60" class="d-inline-block align-text-top">
                               </a>
                          </div>
