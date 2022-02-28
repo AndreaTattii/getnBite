@@ -16,6 +16,8 @@
     $punteggio = $connessione->real_escape_string($_REQUEST['voto']);
     $testo = $connessione->real_escape_string($_REQUEST['recensione']);
 
+    $sezioneRecensione = $_POST['sezione'];
+
     $utente = $_SESSION['email'];
 
    // ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MM-YYYY HH24:MI:SS';
