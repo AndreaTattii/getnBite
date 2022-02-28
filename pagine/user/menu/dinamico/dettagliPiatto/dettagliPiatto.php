@@ -135,12 +135,16 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                         
 
                         <center>
                             <table style="width:80%; border: 3px solid; border-color: black;">
                                 <tr style="border: 3px solid; border-color: #black;">
-                                    <td style="border: 3px solid; border-color: #00E1A5;"><img src="'.$result['url_img'].'"></td>
+                                    <td style="border: 3px solid; border-color: #00E1A5;"><img style="width: 500px;" src="'.$result['url_img'].'"></td>
                                     <td style="border: 3px solid; border-color: #00E1A5;">
                                         <p>
                                             <b>Descrizione</b>
@@ -159,7 +163,7 @@
                                         </p>
                                         <br>
                                         <br>
-                                        <p>'.$result['prezzo'].'</p>
+                                        <p>'.$result['prezzo'].'€</p>
                                     </td>
                                   
                                       
@@ -180,7 +184,13 @@
                                     </tr>    
                                     <tr style="border: 3px solid; border-color: #black;">
                                         <td style="border: 3px solid; border-color: #00E1A5;">
-                                            <!-- inserire qui bottoni  -->
+                                            <form action="../../queryCarrello.php" method="post">
+                                                <label for="inputEmail4" class="form-label">Quantità</label>
+                                                <input type="number" class="form-control" id="quantità" name="quantità" min="1" required>
+                                                <br>
+                                                <br>
+                                                <input type="submit" value="Aggiungi" style="text-decoration: none; color: white; font-size:30px; border: none; background-color: #00E1A5; border-radius:25px;">
+                                            </form>
                                         </td>
                                         <td style="border: 3px solid; border-color: #00E1A5;">
                                             <p>

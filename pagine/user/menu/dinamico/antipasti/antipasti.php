@@ -93,6 +93,10 @@
 		}
 	?>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
     
 
         
@@ -128,7 +132,7 @@
                         die("Errore: ".$connessione->connect_error);
                     }
 
-                    $sql= "SELECT * FROM pietanza";
+                    $sql= "SELECT * FROM pietanza WHERE tipo='antipasti'";
                     if($result = $connessione->query($sql)){
                         if($result->num_rows > 0){
                             echo'
@@ -142,7 +146,7 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                                 <br>
                     
                                 ';
@@ -155,12 +159,12 @@
 
                                     
                                         <div class="col-sm align-self-center">
-                                            <a href="">
+                                            
                                                 <div class="card text-center align-self-center" style="width:350px">
                                                     <img class="card-img-top" src="'.$row['url_img'].'" alt="Card image" style="width:100%">
                                                     <div class="card-body">
 
-                                                        <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="../dettagliPiatto/dettagliPiatto.php"><b>'.$row['nome'].'</b></a></p>
+                                                        
                                                         <form action="../dettagliPiatto/dettagliPiatto.php" method="post">
                                                             <p class="card-title">
                                                                 <input type="hidden" name="piatto" value="'.$row['id'].'">
@@ -169,7 +173,7 @@
                                                         </form>
                                                     </div>
                                                 </div>
-                                            </a>
+                                         
                                         </div>
 
                                         ';
@@ -188,109 +192,6 @@
 
                 ?>
 
-
-		<!-- <div class="row justify-content-center g-5" >
-			<div class="col-sm align-self-center">
-                <a href="dinamico/antipasti/antipasti.php"><div class="card text-center align-self-center" style="width:350px">
-                    <img class="card-img-top" src="../../../../../img/menu/antipasti.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/antipasti/antipasti.php"><b>ANTIPASTI</b></a></p>
-                        
-                    </div>
-                </div></a>
-            </div>
-
-            <div class="col-sm align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                    <img class="card-img-top" src="../../../../../img/menu/primi.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="primi.php"><b>PRIMI</b></a></p>
-                        
-                    </div>
-                </div>
-		    </div>
-
-            <div class="col-sm align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                <img class="card-img-top" src="../../../../../img/menu/secondi.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="secondi.php"><b>SECONDI</b></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>    
-        <br>
-        <div class="row justify-content-center g-5">
-            <div class="col-sm-4 align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                <img class="card-img-top" src="../../../../../img/menu/pizze.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="pizze.php"><b>PIZZE</b></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                <img class="card-img-top" src="../../../../../img/menu/contorni.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="contorni.php"><b>CONTORNI</b></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                <img class="card-img-top" src="../../../../../img/menu/dolci.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dolci.php"><b>DOLCI</b></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row justify-content-center g-5">
-            <div class="col-sm-4 align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                <img class="card-img-top" src="../../../../../img/menu/amari.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="amari.php"><b>AMARI</b></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                <img class="card-img-top" src="../../../../../img/menu/caffe.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="caffe.php"><b>CAFFÉ</b></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 align-self-center">
-                <div class="card text-center align-self-center" style="width:350px">
-                <img class="card-img-top" src="../../../../../img/menu/bibite.png" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="bibite.php"><b>BIBITE</b></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div> -->
 
     <br>
     <br>

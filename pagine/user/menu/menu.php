@@ -129,7 +129,7 @@
                     <img class="card-img-top" src="../../../img/menu/primi.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="primi.php"><b>PRIMI</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/primi/primi.php"><b>PRIMI</b></a></p>
                         
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                 <img class="card-img-top" src="../../../img/menu/secondi.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="secondi.php"><b>SECONDI</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/secondi/secondi.php"><b>SECONDI</b></a></p>
                         
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                 <img class="card-img-top" src="../../../img/menu/pizze.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="pizze.php"><b>PIZZE</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/pizze/pizze.php"><b>PIZZE</b></a></p>
                         
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                 <img class="card-img-top" src="../../../img/menu/contorni.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="contorni.php"><b>CONTORNI</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/contorni/contorni.php"><b>CONTORNI</b></a></p>
                         
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                 <img class="card-img-top" src="../../../img/menu/dolci.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dolci.php"><b>DOLCI</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/dolci/dolci.php"><b>DOLCI</b></a></p>
                         
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                 <img class="card-img-top" src="../../../img/menu/amari.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="amari.php"><b>AMARI</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/amari/amari.php"><b>AMARI</b></a></p>
                         
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                 <img class="card-img-top" src="../../../img/menu/caffe.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="caffe.php"><b>CAFFÉ</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/caffe/caffe.php"><b>CAFFÉ</b></a></p>
                         
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                 <img class="card-img-top" src="../../../img/menu/bibite.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         
-                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="bibite.php"><b>BIBITE</b></a></p>
+                            <p><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="dinamico/bibite/bibite.php"><b>BIBITE</b></a></p>
                         
                     </div>
                 </div>
