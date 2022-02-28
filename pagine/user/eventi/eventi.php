@@ -75,7 +75,7 @@
 		}
 	?>
 
-    <div class="img-fluid" style="background-image: url('../../../img/Eventi/img1.png'); height: 500px">
+    <div class="img-fluid" style="background-image: url('../../../img/Eventi/img1.png'); height: 500px; background-repeat: no-repeat; width:100%; background-position: center;">
         <center>
             <br>
             <br>

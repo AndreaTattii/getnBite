@@ -78,7 +78,7 @@
 		}
 	?>
 	
-    <div style="background-image: url('../../../img/Contatti/img1.png'); height: 500px">
+    <div style="background-image: url('../../../img/Contatti/img1.png'); height: 500px; background-repeat: no-repeat; width:100%; background-position: center;">
         <center>
             <br>
             <br>

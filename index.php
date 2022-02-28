@@ -102,7 +102,7 @@
             <br>
             <br>
 			<p style="color: white; font-size:20px;">Il miglior sito di consegne.</p>
-            <h2 style="color: white; font-size:100px;">Il cibo chiama: GetnBite!</h2>
+            <h2 style="color: white; font-size:80px;">Il cibo chiama: GetnBite!</h2>
             <p style="color: white; font-size:20px;">Facile da ordinare.</p>
             <p style="color: white; font-size:20px;">Buono da mangiare.</p> 
 			<br>

@@ -80,7 +80,7 @@
 	?>
 	
 
-	<div style="background-image: url('../../../img/Recensioni/img1.png'); height: 500px; text-align:center;">
+	<div style="background-image: url('../../../img/Recensioni/img1.png'); height: 500px; text-align:center; background-repeat: no-repeat; width:100%; background-position: center;">
 		
 			<br>
 			<p style="color: white; font-size:20px;">É il momento di far sentire la tua voce!</p>
