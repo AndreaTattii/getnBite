@@ -23,8 +23,8 @@
 
     if($connessione->query($sqlPietanza) === true){
         
-        //header("location: ../../../../");
-        //echo "Piatto inserito con successo";
+        header("location: ../gestionePiatti.php");
+        echo "Piatto inserito con successo";
     }else{
         echo "Errore durante inserimento: ".$connessione->error."<br>";
     }
