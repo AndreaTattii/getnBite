@@ -118,76 +118,92 @@
             die("Errore: ".$connessione->connect_error);
         }
 
-        $sql= "SELECT * FROM pietanza WHERE id=$idPiatto";
-
+        
+        $sql= "SELECT * FROM pietanza WHERE id='".$idPiatto."'";
         if($result = $connessione->query($sql)){
-            if($result->num_rows > 0){
-                echo'
-                <div class="container g-15">
-                    <div class="row ">
-                        <div class="col-sm">
-                            <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
-                                <center>
-                                    <h2>'.$result['nome'].'<h2>
-                                </center>
+            if($result=$result->fetch_array()){
+                
+
+                    echo'
+                    <div class="container g-15">
+                        <div class="row ">
+                            <div class="col-sm">
+                                <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                                    <center>
+                                        <h2>'.$result['nome'].'<h2>
+                                    </center>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
+                        
 
-                    <center>
-                        <table style="width:80%; border: 3px solid; border-color: black;">
-                            <tr style="border: 3px solid; border-color: #black;">
-                                <td style="border: 3px solid; border-color: #00E1A5;"><img src="'.$result['url_img'].'"></td>
-                                <td style="border: 3px solid; border-color: #00E1A5;">
-                                    <p>
-                                        <b>Descrizione</b>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <p>'.$result['descrizione'].'</p>
-                                </td>
-                            </tr>
-                            <tr style="border: 3px solid; border-color: #black;">
-                                <td style="border: 3px solid; border-color: #00E1A5;">
-                                    <p>
-                                        <b>Prezzo</b>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p>'.$result['prezzo'].'</p>
-                                </td>
-                                <td style="border: 3px solid; border-color: #00E1A5;">
-                                    <p>
-                                        <b>Ingredienti</b>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p>'.$result['nome'].'</p>
-                                </td>
-                            </tr>    
-                            <tr style="border: 3px solid; border-color: #black;">
-                                <td style="border: 3px solid; border-color: #00E1A5;">
-                                    <!-- inserire qui bottoni  -->
-                                </td>
-                                <td style="border: 3px solid; border-color: #00E1A5;">
-                                    <p>
-                                        <b>Allergeni</b>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p>----------</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </center>
-                    </div>
-                    ';
+                        <center>
+                            <table style="width:80%; border: 3px solid; border-color: black;">
+                                <tr style="border: 3px solid; border-color: #black;">
+                                    <td style="border: 3px solid; border-color: #00E1A5;"><img src="'.$result['url_img'].'"></td>
+                                    <td style="border: 3px solid; border-color: #00E1A5;">
+                                        <p>
+                                            <b>Descrizione</b>
+                                        </p>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <p>'.$result['descrizione'].'</p>
+                                    </td>
+                                </tr>
+                                <tr style="border: 3px solid; border-color: #black;">
+                                    <td style="border: 3px solid; border-color: #00E1A5;">
+                                        <p>
+                                            <b>Prezzo</b>
+                                        </p>
+                                        <br>
+                                        <br>
+                                        <p>'.$result['prezzo'].'</p>
+                                    </td>
+                                  
+                                      
+                                        <td style="border: 3px solid; border-color: #00E1A5;">
+                                            <p>
+                                                <b>Ingredienti</b>
+                                            </p>
+                                            <br>
+                                            <br>
+                                            ';
+                                            $sql= "SELECT * FROM pietanza, ingrediente, pietanzacontieneingrediente WHERE pietanza.id=idPietanza AND ingrediente.nome=nomeIngrediente AND pietanza.id='".$idPiatto."'";
+                                            $result = $connessione->query($sql);
+                                            while($row=$result->fetch_array()){ 
+                                                echo'<p>'.$row['nomeIngrediente'].',</p>';
+                                            }
+                                            echo'
+                                        </td>
+                                    </tr>    
+                                    <tr style="border: 3px solid; border-color: #black;">
+                                        <td style="border: 3px solid; border-color: #00E1A5;">
+                                            <!-- inserire qui bottoni  -->
+                                        </td>
+                                        <td style="border: 3px solid; border-color: #00E1A5;">
+                                            <p>
+                                                <b>Allergeni</b>
+                                            </p>
+                                            <br>
+                                            <br>
+                                            ';
+                                            $sql= "SELECT * FROM pietanza, ingrediente, pietanzacontieneingrediente WHERE pietanza.id=idPietanza AND ingrediente.nome=nomeIngrediente AND pietanza.id='".$idPiatto."'";
+                                            $result = $connessione->query($sql);
+                                            while($row=$result->fetch_array()){
+                                            echo'<p>'.$row['allergene'].'</p>';
+                                            }
+                                            echo'
+                                        </td>
+                                    </tr>
+                                </table>
+                            </center>
+                            </div>
+                            ';
                       
                        
-                        
+                    
                     
             }else{
                 echo "Non è stato trovato un piatto corrispondente nel database";
