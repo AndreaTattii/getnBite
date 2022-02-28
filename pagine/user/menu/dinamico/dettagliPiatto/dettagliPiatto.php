@@ -186,10 +186,10 @@
                                         <td style="border: 3px solid; border-color: #00E1A5;">
                                             <form action="../../queryCarrello.php" method="post">
                                                 <label for="inputEmail4" class="form-label">Quantità</label>
-                                                <input type="number" class="form-control" id="quantità" name="quantità" min="1" required>
+                                                <input type="number" style="width:150px;" class="form-control" id="quantità" name="quantità" min="1" required>
                                                 <br>
                                                 <br>
-                                                <input type="submit" value="Aggiungi" style="text-decoration: none; color: white; font-size:30px; border: none; background-color: #00E1A5; border-radius:25px;">
+                                                <input type="submit" value="Aggiungi" style="text-decoration: none; color: white; font-size:20px; border: none; background-color: #00E1A5; border-radius:25px;">
                                             </form>
                                         </td>
                                         <td style="border: 3px solid; border-color: #00E1A5;">
