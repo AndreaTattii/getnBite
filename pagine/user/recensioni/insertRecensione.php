@@ -40,6 +40,4 @@
         echo "per inserire una recensione devi prima fare il login";
     }
     
-
-    $connessione->close();
 ?>

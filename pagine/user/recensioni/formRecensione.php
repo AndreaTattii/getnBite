@@ -97,19 +97,19 @@
 				<div style="border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
 					<h4>Cosa vuoi valutare?</h4> 
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+						<input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="antipasti" checked>	
 						<label class="form-check-label" for="flexCheckChecked">
 							Generale
 						</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						<input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="antipasti" checked>
 						<label class="form-check-label" for="flexCheckDefault">
 							Consegna
 						</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						<input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="antipasti" checked>
 						<label class="form-check-label" for="flexCheckDefault">
 							Qualità del cibo
 						</label>
