@@ -129,6 +129,7 @@ CREATE TABLE PietanzaAppartieneOrdine(
 CREATE TABLE CarrelloContienePietanza(
 	idPietanza int,
 	idCarrello int,
+	quantità int,
 	PRIMARY KEY (idPietanza, idCarrello),
 	FOREIGN KEY (idCarrello) REFERENCES Carrello(id),
 	FOREIGN KEY (idPietanza) REFERENCES Pietanza(id)
