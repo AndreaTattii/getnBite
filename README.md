@@ -6,7 +6,7 @@ Avviare il sito tramite un server locale XAMPP (necessario startare apache e mys
 
 Creare DataBase su PHPMyAdmin (codifica utilizzata latin1_general_cs)
 
-Copiare tutto il contenuto del file .SQL e copiarlo in PHPMyAdmin ()
+Copiare tutto il contenuto del file .SQL e copiarlo in PHPMyAdmin
 
 Credenziali di accesso:  admin--> nome utente = "admin" , password = "ercole"    //per accedere all'account admin è necessario cliccare sulla voce "login admin" nel footer
 
