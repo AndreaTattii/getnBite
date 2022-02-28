@@ -105,7 +105,7 @@
 	   <div class="row">
 		<div class="col-sm-6">
 			<figure class="figure">
-				<img src="../../../img/ChiSiamo/scaffa.png" class="figure-img img-fluid rounded" alt="immagine di sfondo">
+				<img src="../../../img/ChiSiamo/ciccio.png" class="figure-img img-fluid rounded" alt="immagine di sfondo">
 			</figure>
 		</div>
 		<div class="col-sm-6">
@@ -139,7 +139,7 @@
 		</div>
 		<div class="col-sm-6">
 			<figure class="figure">
-				<img src="../../../img/ChiSiamo/andre.png" class="figure-img img-fluid rounded" alt="sfondo">
+				<img src="../../../img/ChiSiamo/tata.png" class="figure-img img-fluid rounded" alt="sfondo">
 			</figure>
 		</div>
 	     </div>
@@ -149,7 +149,7 @@
 	   <div class="row">
 		<div class="col-sm-6">
 			<figure class="figure">
-				<img src="../../../img/ChiSiamo/nick.png" class="figure-img img-fluid rounded" alt="immagine di sfondo">
+				<img src="../../../img/ChiSiamo/nicks.png" class="figure-img img-fluid rounded" alt="immagine di sfondo">
 			</figure>
 		</div>
 		<div class="col-sm-6">
