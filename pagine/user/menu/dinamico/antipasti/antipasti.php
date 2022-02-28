@@ -23,7 +23,7 @@
 						<a class="navbar-brand" href="../../../../../index.php">
 							<img src="../../../../../img/Home/logoScritta.png" alt="fvf" height="50" class="d-inline-block align-text-top">
 						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -128,7 +128,7 @@
                         die("Errore: ".$connessione->connect_error);
                     }
 
-                    $sql= "SELECT url_img, nome FROM pietanza";
+                    $sql= "SELECT * FROM pietanza";
                     if($result = $connessione->query($sql)){
                         if($result->num_rows > 0){
                             echo'
@@ -159,7 +159,14 @@
                                                 <div class="card text-center align-self-center" style="width:350px">
                                                     <img class="card-img-top" src="'.$row['url_img'].'" alt="Card image" style="width:100%">
                                                     <div class="card-body">
+
                                                         <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="../../queryCarrello.php"><b>'.$row['nome'].'</b></a></p>
+                                                        <form action="../dettagliPiatto/dettagliPiatto.php" method="post">
+                                                            <p class="card-title">
+                                                                <input type="hidden" name="piatto" value="'.$row['id'].'">
+                                                                <input type="submit" value="'.$row['nome'].'" style="text-decoration: none; color: #00E1A5; font-size:30px; border: none; background-color: transparent;">
+                                                            </p>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </a>
