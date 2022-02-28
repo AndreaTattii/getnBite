@@ -1,23 +1,13 @@
-/*Fattorino (CF, nome, cognome)
-Consegna (id, orario_partenza, stato, orario_arrivo, costo, cfFattorino)
-Recensione (id, testo, ora_pubblicazione, data_pubblicazione, punteggio, titolo, idUtente)
-Utente (id, nome, cognome, email, pass)
-Ordine (id, costo_totale, orario, orario_richiesto, idQuartiere, idUtente)
-Quartiere (id, nome, provincia)
-Evento (id, indirizzo, civ, tipo, num_partecipanti, orario, idUtente, idMenu)
-Menu (id, nome, prezzo)
-MenuContienePietanza (idMenu, idPietanza)
-Carrello (id)
-Pietanza (id, nome, descrizione, url_img, prezzo, tipo)
-PietanzaAppartieneOrdine (idPietanza, idOrdine)
-CarrelloContienePietanza (idCarrello, idPietanza)
-Ingrediente (id, nome)
-PietanzaContieneIngrediente (idPietanza, idIngrediente)*/
+
 -------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------
 /*da codificare in latin1_general_cs*/-----------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------
+
+
+/*COPIARE IN PHPMYADMIN*/
+
 CREATE TABLE Fattorino (
 	CF char(16) PRIMARY KEY,
 	nome varchar(255) NOT NULL,
@@ -150,15 +140,16 @@ CREATE TABLE Ristoratore(
 );
 
 INSERT INTO Ristoratore (utente, pass) VALUES 
-    ('admin','a2242ead55c94c3deb7cf2340bfef9d5bcaca22dfe66e646745ee4371c633fc8');
+    ('admin','63c3240450c1ac9bebbcc4999d787f642e2a59ba9f260f1f0e180d2b59ae7924');
+
 
 /*
 	nome utente: admin
-	password:'pippo'
+	password:'ercole'
 */
 
 
-/*riempimento tabella ingredienti*/
+/*riempimento tabella ingredienti con relativi allergeni*/
 INSERT INTO Ingrediente (nome, allergene) values('spahetti','glutine');
 INSERT INTO Ingrediente (nome, allergene) values('guanciale',NULL);
 INSERT INTO Ingrediente (nome, allergene) values('uova','uova e derivati');
