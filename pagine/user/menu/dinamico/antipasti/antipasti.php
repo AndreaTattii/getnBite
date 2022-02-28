@@ -155,12 +155,12 @@
 
                                     
                                         <div class="col-sm align-self-center">
-                                            <a href="../../queryCarrello.php">
+                                            <a href="">
                                                 <div class="card text-center align-self-center" style="width:350px">
                                                     <img class="card-img-top" src="'.$row['url_img'].'" alt="Card image" style="width:100%">
                                                     <div class="card-body">
 
-                                                        <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="../../queryCarrello.php"><b>'.$row['nome'].'</b></a></p>
+                                                        <p class="card-title"><a style="text-decoration: none; color: #00E1A5; font-size:30px;" href="../dettagliPiatto/dettagliPiatto.php"><b>'.$row['nome'].'</b></a></p>
                                                         <form action="../dettagliPiatto/dettagliPiatto.php" method="post">
                                                             <p class="card-title">
                                                                 <input type="hidden" name="piatto" value="'.$row['id'].'">
