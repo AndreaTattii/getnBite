@@ -24,8 +24,8 @@
 	?>
 			<nav class="navbar  navbar-expand-lg navbar-light bg-light">
 					<div class="container p-2">
-						<a class="navbar-brand" href="./">
-							<img src="../../../img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+						<a class="navbar-brand" href="../../../index.php">
+							<img src="../../../img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
 							<span class="navbar-toggler-icon"></span>
@@ -54,8 +54,8 @@
 			<!-- NAVABAR PER UTENTE NON LOGGATO -->
 			<nav class="navbar  navbar-expand-lg">
 					<div class="container p-2">
-						<a class="navbar-brand" href="./">
-							<img src="../../../img/Home/logoScritta.jpg" alt="" height="50" class="d-inline-block align-text-top">
+						<a class="navbar-brand" href="../../../index.php">
+							<img src="../../../img/Home/logoScritta.png" alt="" height="50" class="d-inline-block align-text-top">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:black;">
 							<span class="navbar-toggler-icon"></span>
@@ -84,7 +84,7 @@
 		
 			<br>
 			<p style="color: white; font-size:20px;">É il momento di far sentire la tua voce!</p>
-			<h2 style="color: white; font-size:100px;">Recensioni</h2>
+			<h2 style="color: white; font-size:70px;">Recensioni</h2>
 			<p style="color: white; font-size:20px;">La tua opinione conta davvero.</p>
 		
 	</div>
@@ -94,22 +94,22 @@
 		<div class="row">
 			<div class="col-sm-3">
 
-				<div style="border:1px  solid #00E1A5; padding: 20px; border-radius: 5px;">
+				<div style="border:1px  solid #00E1A5; padding: 20px; border-radius: 5px; margin:10px;">
 					<h4>Cosa vuoi valutare?</h4> 
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="antipasti" checked>	
+						<input class="form-check-input" type="radio" name="sezione" value="generale" id="flexRadioDefault2" value="antipasti" checked>	
 						<label class="form-check-label" for="flexCheckChecked">
 							Generale
 						</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="antipasti" checked>
+						<input class="form-check-input" type="radio" name="sezione" value="consegna" id="flexRadioDefault2" value="antipasti" checked>
 						<label class="form-check-label" for="flexCheckDefault">
 							Consegna
 						</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="sezione" id="flexRadioDefault2" value="antipasti" checked>
+						<input class="form-check-input" type="radio" name="sezione" value="cibo" id="flexRadioDefault2" value="antipasti" checked>
 						<label class="form-check-label" for="flexCheckDefault">
 							Qualità del cibo
 						</label>
@@ -171,7 +171,7 @@
 				<div class="row justify-content-center">
 					<div class="col-4 ">
 						<a class="navbar-brand" href="./">
-							<img src="../../../img/home/logoScritta.png" alt=""  height="60" class="d-inline-block align-text-top">
+							<img src="../../../img/home/logoScritta.png" alt=""  height="50" class="d-inline-block align-text-top">
 						</a>
 					</div>
 					<div class="col-4" ></div>

@@ -16,7 +16,10 @@
   <body>
   <?php
 		session_start();
-        $piatto=$_POST['piatto'];
+
+        $idPiatto=$_POST['piatto'];
+
+
   		if(isset($_SESSION['email'])){
 	?>
 			<nav class="navbar  navbar-expand-lg navbar-light bg-light">
@@ -100,24 +103,99 @@
     
     
     <?php
-        echo'
-        <div class="row ">
-			<div class="col-sm">
-                <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+
+
+        $host="127.0.0.1";
+        $user="root";
+        $pass="";
+        $database="getnbite";
+
+        $connessione= new mysqli($host, $user, $pass , $database);
+
+        error_reporting(0);
+
+        if($connessione === false){
+            die("Errore: ".$connessione->connect_error);
+        }
+
+        $sql= "SELECT * FROM pietanza WHERE id=$idPiatto";
+
+        if($result = $connessione->query($sql)){
+            if($result->num_rows > 0){
+                echo'
+                <div class="container g-15">
+                    <div class="row ">
+                        <div class="col-sm">
+                            <div style="border-top-color:#E4E4E4;  border-top-style: solid; border-top-width: 2px; border-bottom-color:#E4E4E4;  border-bottom-style: solid; border-bottom-width: 2px;">
+                                <center>
+                                    <h2>'.$result['nome'].'<h2>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    
+
                     <center>
-                        <h2>'.$piatto.'<h2>
+                        <table style="width:80%; border: 3px solid; border-color: black;">
+                            <tr style="border: 3px solid; border-color: #black;">
+                                <td style="border: 3px solid; border-color: #00E1A5;"><img src="'.$result['url_img'].'"></td>
+                                <td style="border: 3px solid; border-color: #00E1A5;">
+                                    <p>
+                                        <b>Descrizione</b>
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p>'.$result['descrizione'].'</p>
+                                </td>
+                            </tr>
+                            <tr style="border: 3px solid; border-color: #black;">
+                                <td style="border: 3px solid; border-color: #00E1A5;">
+                                    <p>
+                                        <b>Prezzo</b>
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <p>'.$result['prezzo'].'</p>
+                                </td>
+                                <td style="border: 3px solid; border-color: #00E1A5;">
+                                    <p>
+                                        <b>Ingredienti</b>
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <p>'.$result['nome'].'</p>
+                                </td>
+                            </tr>    
+                            <tr style="border: 3px solid; border-color: #black;">
+                                <td style="border: 3px solid; border-color: #00E1A5;">
+                                    <!-- inserire qui bottoni  -->
+                                </td>
+                                <td style="border: 3px solid; border-color: #00E1A5;">
+                                    <p>
+                                        <b>Allergeni</b>
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <p>----------</p>
+                                </td>
+                            </tr>
+                        </table>
                     </center>
-                </div>
-			</div>
-		</div>
-
-        ';
+                    </div>
+                    ';
+                      
+                       
+                        
+                    
+            }else{
+                echo "Non è stato trovato un piatto corrispondente nel database";
+            }
+        }else{
+            echo "Impossibile eseguire la query";
+        }
     ?>
-
-        <?php
-
-                  
-        ?>
 
 
 
