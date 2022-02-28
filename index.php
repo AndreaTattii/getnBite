@@ -45,7 +45,7 @@
 									<a class="nav-link" href="pagine/user/profilo/profilo.php" style="color: black">Profilo</a>
 								</li>
 								<li class="nav-item">
-									<a href="pagine/user/carrello/carrello.php"><img src="img/carrello/carrello.png" style="width:42px;height:42px;"></a>
+									<a href="pagine/user/carrello/carrello.php"><img src="img/Carrello/carrello2.jpg" style="width:42px;height:42px;"></a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="pagine/user/logout/logout.php" style="color: black">Logout</a>
