@@ -22,10 +22,9 @@ CREATE TABLE Consegna(
 );
 
 CREATE TABLE Utente(
-	id int PRIMARY KEY AUTO_INCREMENT,
 	nome varchar(255) NOT NULL,
 	cognome varchar(255) NOT NULL,
-	email varchar(255) NOT NULL UNIQUE,
+	email varchar(255) PRIMARY KEY,
 	pass varchar(255) NOT NULL
 );
 
